@@ -57,13 +57,8 @@ def apply_scientific_style() -> None:
 @contextmanager
 def scientific_plot_context() -> Iterator[None]:
     """Temporarily apply scientific style; restore previous rcParams on exit."""
-    backup = mpl.rcParams.copy()
-    try:
-        apply_scientific_style()
+    with mpl.rc_context(rc=_rc_scientific()):
         yield
-    finally:
-        mpl.rcParams.clear()
-        mpl.rcParams.update(backup)
 
 
 def _linear_endpoint_ticks(
