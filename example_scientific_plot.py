@@ -27,7 +27,7 @@ def main() -> None:
     finalize_scientific_axes(ax, num_xticks=5, num_yticks=5)
 
     fig.tight_layout()
-    out = "/workspace/example_scientific_plot.png"
+    out = "example_scientific_plot.png"
     fig.savefig(out)
     print(f"Saved: {out}")
 
