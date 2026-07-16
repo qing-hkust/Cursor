@@ -1,12 +1,11 @@
 ---
-description: PR and change hygiene expectations for agents in this repo
+description: PR and change hygiene for category-scoped agent work
 alwaysApply: false
 ---
 
-# PR hygiene (quality)
+# PR hygiene
 
-- Prefer small, reviewable diffs; avoid unrelated refactors.
-- If behavior or plot output changes, note how it was verified (`python3 example_scientific_plot.py`).
-- Do not commit secrets or expand `environment.json` without a clear need.
-- Use `[review]` in the agent title when the run’s job is critique rather than implementation.
-- For implement/domain runs, open or update a PR with a concise summary of category + outcome.
+- Scope edits to one category folder when possible; avoid cross-folder drive-bys.
+- If plot output changes, note verification via `python3 data-analysis/example_scientific_plot.py`.
+- Do not commit secrets, large raw datasets, or simulation dumps — gitignore or external storage.
+- Prefer small reviewable diffs and a short PR summary naming the category + outcome.

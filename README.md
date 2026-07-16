@@ -1,18 +1,13 @@
-# Cursor
+# Cursor agents workspace
 
-Agent workspace for scientific matplotlib figures and Cursor Cloud configuration.
+Folders match research/teaching work types. See [docs/agent-organization.md](docs/agent-organization.md).
 
-## Agent organization
-
-Agents are categorized with title prefixes. See:
-
-- [AGENTS.md](AGENTS.md) — short boot index
-- [docs/agent-organization.md](docs/agent-organization.md) — full reorganization proposal
-
-| Prefix | Category |
+| Folder | Cloud? |
 | --- | --- |
-| `[impl]` | Implement |
-| `[review]` | Review |
-| `[chore]` | Chore |
-| `[research]` | Research |
-| `[domain]` | Scientific plots |
+| `literature/` | Prefer cloud |
+| `course-prep/` | Prefer cloud |
+| `chore/` | Prefer cloud |
+| `data-analysis/` | Mixed |
+| `writing/` | Local (+ cloud drafts) |
+| `simulation/` | Local / HPC (+ cloud for scripts) |
+| `shared/` | Library code for all of the above |

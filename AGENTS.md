@@ -1,43 +1,42 @@
 # AGENTS.md
 
-Short index for Cursor Cloud agents in this repo. Full taxonomy and migration steps: [docs/agent-organization.md](docs/agent-organization.md).
+Academic agent workspace. Taxonomy and cloud/local guidance: [docs/agent-organization.md](docs/agent-organization.md).
 
-## Categories (use in agent titles)
+## Categories (folders)
 
-| Prefix | Use for |
+| Folder | Use for |
 | --- | --- |
-| `[impl]` | Scoped code changes / features |
-| `[review]` | Diff critique, security, style |
-| `[chore]` | Deps, digests, cleanup |
-| `[research]` | Papers, model choice, docs |
-| `[domain]` | Scientific matplotlib / plot style |
+| `simulation/` | Sim drivers, configs, sweep scripts |
+| `data-analysis/` | Analysis scripts, figures, small tables |
+| `literature/` | Paper notes, digests, reading lists |
+| `writing/` | Manuscripts, proposals, outlines |
+| `course-prep/` | Lectures, psets, rubrics |
+| `chore/` | Repo/env maintenance tasks |
+| `shared/` | Cross-cutting helpers (plot style, etc.) |
 
-Example title: `[domain] cursor: adjust inward-tick defaults`
+Prefer **one folder per agent run**. Cloud agents only see what is in this git repo.
 
 ## Environment
 
 - **Runtime**: Python 3.12 on Ubuntu (Cursor Cloud)
-- **Dependencies**: `matplotlib` (see `requirements.txt`)
-- **Install**: `.cursor/environment.json` (keep lean — no HF/torch here)
+- **Dependencies**: `matplotlib` (`requirements.txt`)
+- **Install**: `.cursor/environment.json` — keep lean
 
 ## Verify
 
 ```bash
-python3 example_scientific_plot.py
+python3 data-analysis/example_scientific_plot.py
 ```
 
-Writes `example_scientific_plot.png` in the repo root (headless; no display server).
+Writes `data-analysis/example_scientific_plot.png`.
 
-## Layout
+## Cloud vs local (short)
 
-- `scientific_plot.py` — shared style helpers (Arial 18 pt, inward ticks, legend helpers)
-- `example_scientific_plot.py` — sample figure generator
-- `.cursor/rules/{core,domain,quality}/` — categorized project rules
-- `docs/agent-organization.md` — reorganization proposal
+- **Cloud-friendly**: literature digests, course-prep drafts, chores, batch figure regen
+- **Stay local / HPC**: interactive writing, exploratory analysis, heavy simulations
+- **Mixed**: data-analysis scripts in-repo → cloud; large raw data stays outside git
 
 ## Notes
 
-- Keep `.cursor/environment.json` lean: dependency install only, no long-running services.
-- Do not add Docker or `start` commands unless the project gains services that need them.
-- After changing `requirements.txt`, the next agent run refreshes deps via `install`.
-- Prefer one category and one outcome per agent run.
+- No Docker/`start` unless services appear.
+- After changing `requirements.txt`, next run refreshes via `install`.

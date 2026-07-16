@@ -1,13 +1,12 @@
 ---
-description: Scientific matplotlib plot conventions for this repository
-globs: "*.py"
+description: Scientific matplotlib conventions for analysis figures
+globs: "{data-analysis,shared}/**/*.py"
 alwaysApply: false
 ---
 
-# Scientific plots (domain)
+# Scientific plots (data-analysis / shared)
 
-- Prefer helpers in `scientific_plot.py` over one-off rcParams in scripts.
+- Prefer helpers in `shared/scientific_plot.py` over one-off rcParams.
 - Defaults: Arial 18 pt, inward ticks, consistent legend helpers.
-- After changing plot helpers or the example, run `python3 example_scientific_plot.py` and keep `example_scientific_plot.png` in sync when the visual output changes.
-- Save figures with the headless-friendly path used by the example (repo-relative), not absolute machine paths.
-- Agent titles for this work should use the `[domain]` prefix.
+- After changing plot helpers or the example, run `python3 data-analysis/example_scientific_plot.py` and keep `data-analysis/example_scientific_plot.png` in sync when visuals change.
+- Save figures under the relevant category folder (usually `data-analysis/`), not absolute machine paths.

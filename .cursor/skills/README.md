@@ -1,16 +1,13 @@
 # Repo skills (optional)
 
-Put long, on-demand workflows here as `SKILL.md` folders when rules would be too large.
+On-demand workflows by category folder:
 
-Suggested skill categories (mirror agent prefixes):
-
-| Folder | For |
+| Skill area | Folder it supports |
 | --- | --- |
-| `impl/` | Multi-step feature recipes |
-| `domain/` | Plot debugging, figure checklists |
-| `research/` | Paper/model lookup playbooks |
-| `chore/` | Dependency/refresh runbooks |
+| domain / plots | `data-analysis/`, `shared/` |
+| literature digests | `literature/` |
+| course materials | `course-prep/` |
+| sim driver templates | `simulation/` |
+| chores | `chore/` |
 
-Skills load when relevant; keep always-on text in `.cursor/rules/` and `AGENTS.md` instead.
-
-See [docs/agent-organization.md](../../docs/agent-organization.md).
+Keep always-on text in `.cursor/rules/` and `AGENTS.md`. See [docs/agent-organization.md](../../docs/agent-organization.md).
