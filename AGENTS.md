@@ -1,30 +1,43 @@
 # AGENTS.md
 
-## Cursor Cloud specific instructions
+Short index for Cursor Cloud agents in this repo. Full taxonomy and migration steps: [docs/agent-organization.md](docs/agent-organization.md).
 
-Small Python repo for scientific matplotlib figures. Cloud agents should start quickly with the committed `.cursor/environment.json`.
+## Categories (use in agent titles)
 
-### Environment
+| Prefix | Use for |
+| --- | --- |
+| `[impl]` | Scoped code changes / features |
+| `[review]` | Diff critique, security, style |
+| `[chore]` | Deps, digests, cleanup |
+| `[research]` | Papers, model choice, docs |
+| `[domain]` | Scientific matplotlib / plot style |
 
-- **Runtime**: Python 3.12 on Ubuntu (provided by Cursor Cloud)
+Example title: `[domain] cursor: adjust inward-tick defaults`
+
+## Environment
+
+- **Runtime**: Python 3.12 on Ubuntu (Cursor Cloud)
 - **Dependencies**: `matplotlib` (see `requirements.txt`)
-- **Install**: handled automatically by `.cursor/environment.json` before each run
+- **Install**: `.cursor/environment.json` (keep lean — no HF/torch here)
 
-### Verify the setup
+## Verify
 
 ```bash
 python3 example_scientific_plot.py
 ```
 
-This writes `example_scientific_plot.png` in the repo root. No display server is required; figures are saved with matplotlib's default headless backend.
+Writes `example_scientific_plot.png` in the repo root (headless; no display server).
 
-### Project layout
+## Layout
 
-- `scientific_plot.py` — shared matplotlib style helpers (Arial 18 pt, inward ticks, legend helpers)
-- `example_scientific_plot.py` — runnable example that generates a sample figure
+- `scientific_plot.py` — shared style helpers (Arial 18 pt, inward ticks, legend helpers)
+- `example_scientific_plot.py` — sample figure generator
+- `.cursor/rules/{core,domain,quality}/` — categorized project rules
+- `docs/agent-organization.md` — reorganization proposal
 
-### Notes for agents
+## Notes
 
-- Keep `.cursor/environment.json` lean: only dependency install, no long-running services.
+- Keep `.cursor/environment.json` lean: dependency install only, no long-running services.
 - Do not add Docker or `start` commands unless the project gains services that need them.
-- After changing `requirements.txt`, the next agent run will refresh deps via `install`.
+- After changing `requirements.txt`, the next agent run refreshes deps via `install`.
+- Prefer one category and one outcome per agent run.

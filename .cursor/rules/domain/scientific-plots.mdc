@@ -1,0 +1,13 @@
+---
+description: Scientific matplotlib plot conventions for this repository
+globs: "*.py"
+alwaysApply: false
+---
+
+# Scientific plots (domain)
+
+- Prefer helpers in `scientific_plot.py` over one-off rcParams in scripts.
+- Defaults: Arial 18 pt, inward ticks, consistent legend helpers.
+- After changing plot helpers or the example, run `python3 example_scientific_plot.py` and keep `example_scientific_plot.png` in sync when the visual output changes.
+- Save figures with the headless-friendly path used by the example (repo-relative), not absolute machine paths.
+- Agent titles for this work should use the `[domain]` prefix.

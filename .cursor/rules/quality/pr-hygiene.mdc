@@ -1,0 +1,12 @@
+---
+description: PR and change hygiene expectations for agents in this repo
+alwaysApply: false
+---
+
+# PR hygiene (quality)
+
+- Prefer small, reviewable diffs; avoid unrelated refactors.
+- If behavior or plot output changes, note how it was verified (`python3 example_scientific_plot.py`).
+- Do not commit secrets or expand `environment.json` without a clear need.
+- Use `[review]` in the agent title when the run’s job is critique rather than implementation.
+- For implement/domain runs, open or update a PR with a concise summary of category + outcome.

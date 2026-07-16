@@ -1,0 +1,12 @@
+---
+description: Cloud agent boot and environment hygiene for this repo
+alwaysApply: true
+---
+
+# Cloud boot (core)
+
+- Read `AGENTS.md` first; follow the verify command after plot-related changes.
+- Keep `.cursor/environment.json` lean — install deps only; no Docker/`start` unless services exist.
+- Use agent title prefixes from `AGENTS.md`: `[impl]`, `[review]`, `[chore]`, `[research]`, `[domain]`.
+- One primary category and one clear outcome per run.
+- Do not install heavy ML stacks (torch, transformers, etc.) into this environment; use a separate env/repo for that work.
