@@ -1,11 +1,12 @@
 ---
-description: Cloud agent boot and folder routing for this academic workspace
+description: Route work to category folders and matching subagents
 alwaysApply: true
 ---
 
-# Cloud boot (core)
+# Category routing
 
-- Read `AGENTS.md` and route work into exactly one category folder: `simulation/`, `data-analysis/`, `literature/`, `writing/`, `course-prep/`, or `chore/`. Put shared libraries in `shared/`.
-- Cloud agents only see files in this git repo — do not assume laptop-only paths exist.
-- Keep `.cursor/environment.json` lean. Do not install HPC/GPU stacks here unless the task truly needs them in this environment.
-- After plot-related changes, run `python3 data-analysis/example_scientific_plot.py`.
+- Primary categories: `simulation`, `data-analysis`, `literature`, `writing`, `course-prep`, `chore`.
+- Prefer delegating to `.cursor/agents/<category>.md` when the task matches.
+- Put outputs in the matching folder; shared libraries go in `shared/`.
+- Cloud agents only see this git repo — no laptop-only paths unless documented.
+- Keep `.cursor/environment.json` lean. Verify plots with `python3 data-analysis/example_scientific_plot.py`.

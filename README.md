@@ -1,13 +1,14 @@
 # Cursor agents workspace
 
-Folders match research/teaching work types. See [docs/agent-organization.md](docs/agent-organization.md).
+Six academic categories — each has a **folder** and a **subagent** in `.cursor/agents/`.
 
-| Folder | Cloud? |
-| --- | --- |
-| `literature/` | Prefer cloud |
-| `course-prep/` | Prefer cloud |
-| `chore/` | Prefer cloud |
-| `data-analysis/` | Mixed |
-| `writing/` | Local (+ cloud drafts) |
-| `simulation/` | Local / HPC (+ cloud for scripts) |
-| `shared/` | Library code for all of the above |
+| Category | Folder | Subagent file |
+| --- | --- | --- |
+| Simulation | `simulation/` | `simulation.md` |
+| Data analysis | `data-analysis/` | `data-analysis.md` |
+| Literature | `literature/` | `literature.md` |
+| Writing | `writing/` | `writing.md` |
+| Course prep | `course-prep/` | `course-prep.md` |
+| Chore | `chore/` | `chore.md` |
+
+See [AGENTS.md](AGENTS.md) and [docs/agent-organization.md](docs/agent-organization.md).

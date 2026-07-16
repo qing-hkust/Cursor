@@ -1,26 +1,23 @@
 # AGENTS.md
 
-Academic agent workspace. Taxonomy and cloud/local guidance: [docs/agent-organization.md](docs/agent-organization.md).
+Academic agent workspace. Categories are **folders** + **Cursor subagents** under `.cursor/agents/`.
 
-## Categories (folders)
+| Category | Folder | Subagent |
+| --- | --- | --- |
+| Simulation | `simulation/` | `.cursor/agents/simulation.md` |
+| Data analysis | `data-analysis/` | `.cursor/agents/data-analysis.md` |
+| Literature | `literature/` | `.cursor/agents/literature.md` |
+| Writing | `writing/` | `.cursor/agents/writing.md` |
+| Course prep | `course-prep/` | `.cursor/agents/course-prep.md` |
+| Chore | `chore/` | `.cursor/agents/chore.md` |
 
-| Folder | Use for |
-| --- | --- |
-| `simulation/` | Sim drivers, configs, sweep scripts |
-| `data-analysis/` | Analysis scripts, figures, small tables |
-| `literature/` | Paper notes, digests, reading lists |
-| `writing/` | Manuscripts, proposals, outlines |
-| `course-prep/` | Lectures, psets, rubrics |
-| `chore/` | Repo/env maintenance tasks |
-| `shared/` | Cross-cutting helpers (plot style, etc.) |
+Delegate with the Task tool / `@` to the matching subagent. Each folder also has its own `AGENTS.md`.
 
-Prefer **one folder per agent run**. Cloud agents only see what is in this git repo.
+Details: [docs/agent-organization.md](docs/agent-organization.md).
 
 ## Environment
 
-- **Runtime**: Python 3.12 on Ubuntu (Cursor Cloud)
-- **Dependencies**: `matplotlib` (`requirements.txt`)
-- **Install**: `.cursor/environment.json` — keep lean
+- Python 3.12; deps in `requirements.txt`; install via `.cursor/environment.json` (keep lean)
 
 ## Verify
 
@@ -28,15 +25,7 @@ Prefer **one folder per agent run**. Cloud agents only see what is in this git r
 python3 data-analysis/example_scientific_plot.py
 ```
 
-Writes `data-analysis/example_scientific_plot.png`.
+## Cloud vs local
 
-## Cloud vs local (short)
-
-- **Cloud-friendly**: literature digests, course-prep drafts, chores, batch figure regen
-- **Stay local / HPC**: interactive writing, exploratory analysis, heavy simulations
-- **Mixed**: data-analysis scripts in-repo → cloud; large raw data stays outside git
-
-## Notes
-
-- No Docker/`start` unless services appear.
-- After changing `requirements.txt`, next run refreshes via `install`.
+- **Cloud:** literature, course-prep, chore, batch data-analysis
+- **Local/HPC:** interactive writing, exploratory analysis, heavy simulation
