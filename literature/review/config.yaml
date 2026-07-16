@@ -1,0 +1,114 @@
+project:
+  name: "Literature Review Agent"
+  user_background_hint: |
+    Mechanism-to-design pipeline for electrochemical systems, focused on:
+    - Zn metal anodes (mossy Zn vs dendrites), reversibility loss (HER, dead Zn), stress/defects/diffusion coupling
+    - Nanoporous metals via dealloying; hyperuniformity / spectral density (SEM-FFT, SAXS)
+    - Ion-selective metallic nanoporous membranes (alkaline Zn-air relevance)
+    - Seawater electrolysis side reactions and reactor engineering
+
+search:
+  # Metadata sources: OpenAlex + Semantic Scholar (recommended); Crossref optional fallback.
+  backends:
+    - openalex
+    - semantic_scholar
+    - crossref
+  # How far back "latest" goes.
+  lookback_years: 3
+  max_results_per_query: 25
+  max_total_results: 60
+  query_templates:
+    - "mossy zinc"
+    - "zinc metal anode hydrogen evolution"
+    - "dead zinc separator"
+    - "aqueous zinc reversibility loss"
+    - "hyperuniformity nanoporous gold"
+    - "spectral density SAXS nanoporous gold"
+    - "dealloying nanoporous metal hyperuniformity"
+    - "nanoporous metal membrane ion selectivity"
+    - "seawater electrolysis chlorine suppression"
+
+apis:
+  # Required for Unpaywall and polite OpenAlex access. Replace with your real email.
+  contact_email: "you@example.com"
+  # Optional: set here or export SEMANTIC_SCHOLAR_API_KEY (higher rate limits).
+  # Free key: https://www.semanticscholar.org/product/api#api-key-form
+  semantic_scholar_api_key: null
+  unpaywall:
+    enabled: true
+  semantic_scholar:
+    enabled: true
+    # publicationDate | citationCount | relevance
+    sort: publicationDate
+
+quality:
+  # Hard blocks by publisher/domain keywords.
+  blocked_domain_keywords:
+    - mdpi
+    - hindawi
+    - scirp
+    - frontiersin
+  # Soft preference signals for journals/venues (substring match on container-title).
+  preferred_journal_keywords:
+    - pnas
+    - joule
+    - nature communications
+    - nature energy
+    - nature materials
+    - energy & environmental science
+    - advanced materials
+    - angewandte chemie
+    - acs energy letters
+    - nano letters
+    - chemical reviews
+    - chemical society reviews
+    - progress in materials science
+    - acta materialia
+    - journal of the electrochemical society
+  # Optional allowlist: if non-empty, only keep works whose venue matches at least one keyword.
+  allowed_venue_keywords_any: []
+  # Additional guards to keep results on-topic and reputable.
+  # A work must match at least one of these topic keywords in title/abstract/journal/publisher.
+  topic_keywords_any:
+    - zinc
+    - zn
+    - electrodeposition
+    - "zinc anode"
+    - "zinc-air"
+    - "mossy"
+    - "dead zinc"
+    - "hydrogen evolution"
+    - "hyperuniform"
+    - "nanoporous gold"
+    - dealloying
+    - "spectral density"
+    - saxs
+    - seawater
+    - chlorine
+  # Require at least this many "preferred venue" hits (each keyword match is +5).
+  min_prefer_score: 5
+  # If true, exclude anything that looks like a blocked publisher/domain.
+  enforce_blocklist: true
+
+web_explainers:
+  # Only include explainers from these domains.
+  allow_domains:
+    - en.wikipedia.org
+    - wikipedia.org
+    - libretexts.org
+  topics:
+    - "Hyperuniformity"
+    - "Electrodeposition"
+    - "Zinc-air battery"
+    - "Hydrogen evolution reaction"
+    - "Dealloying"
+  # Curated LibreTexts pages (stable URLs; summaries from page metadata).
+  libretexts_urls:
+    Electrodeposition: "https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Supplemental_Modules_(Analytical_Chemistry)/Electrochemistry/Electrolytic_Cells/Electroplating"
+    Electrolysis: "https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Supplemental_Modules_(Analytical_Chemistry)/Electrochemistry/Electrolytic_Cells/Electrolysis_I"
+    "Electrochemical analysis": "https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Supplemental_Modules_(Analytical_Chemistry)/Analytical_Sciences_Digital_Library/In_Class_Activities/Electrochemical_Methods_of_Analysis"
+
+output:
+  report_dir: "reports"
+  include_bib: true
+  markdown_filename_template: "literature_review_{date}.md"
