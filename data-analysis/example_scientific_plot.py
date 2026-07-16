@@ -3,8 +3,14 @@
 
 from __future__ import annotations
 
+import sys
+from pathlib import Path
+
 import matplotlib.pyplot as plt
 import numpy as np
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "shared"))
 
 from scientific_plot import finalize_scientific_axes, legend_inside_axes
 
@@ -27,7 +33,7 @@ def main() -> None:
     finalize_scientific_axes(ax, num_xticks=5, num_yticks=5)
 
     fig.tight_layout()
-    out = "example_scientific_plot.png"
+    out = Path(__file__).resolve().parent / "example_scientific_plot.png"
     fig.savefig(out)
     print(f"Saved: {out}")
 

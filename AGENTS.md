@@ -1,30 +1,31 @@
 # AGENTS.md
 
-## Cursor Cloud specific instructions
+Academic agent workspace. Categories are **folders** + **Cursor subagents** under `.cursor/agents/`.
 
-Small Python repo for scientific matplotlib figures. Cloud agents should start quickly with the committed `.cursor/environment.json`.
+| Category | Folder | Subagent |
+| --- | --- | --- |
+| Simulation | `simulation/` | `.cursor/agents/simulation.md` |
+| Data analysis | `data-analysis/` | `.cursor/agents/data-analysis.md` |
+| Literature | `literature/` | `.cursor/agents/literature.md` |
+| Writing | `writing/` | `.cursor/agents/writing.md` |
+| Course prep | `course-prep/` | `.cursor/agents/course-prep.md` |
+| Chore | `chore/` | `.cursor/agents/chore.md` |
 
-### Environment
+Delegate with the Task tool / `@` to the matching subagent. Each folder also has its own `AGENTS.md`.
 
-- **Runtime**: Python 3.12 on Ubuntu (provided by Cursor Cloud)
-- **Dependencies**: `matplotlib` (see `requirements.txt`)
-- **Install**: handled automatically by `.cursor/environment.json` before each run
+Details: [docs/agent-organization.md](docs/agent-organization.md).
 
-### Verify the setup
+## Environment
+
+- Python 3.12; deps in `requirements.txt`; install via `.cursor/environment.json` (keep lean)
+
+## Verify
 
 ```bash
-python3 example_scientific_plot.py
+python3 data-analysis/example_scientific_plot.py
 ```
 
-This writes `example_scientific_plot.png` in the repo root. No display server is required; figures are saved with matplotlib's default headless backend.
+## Cloud vs local
 
-### Project layout
-
-- `scientific_plot.py` — shared matplotlib style helpers (Arial 18 pt, inward ticks, legend helpers)
-- `example_scientific_plot.py` — runnable example that generates a sample figure
-
-### Notes for agents
-
-- Keep `.cursor/environment.json` lean: only dependency install, no long-running services.
-- Do not add Docker or `start` commands unless the project gains services that need them.
-- After changing `requirements.txt`, the next agent run will refresh deps via `install`.
+- **Cloud:** literature, course-prep, chore, batch data-analysis
+- **Local/HPC:** interactive writing, exploratory analysis, heavy simulation
