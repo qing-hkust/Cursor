@@ -12,24 +12,24 @@ Dewetting literature splits into two related but mechanistically distinct famili
 
 | Family | Transport | Continuum backbone | Typical *T* | Signature |
 |--------|-----------|--------------------|-------------|-----------|
-| **Liquid-film dewetting** | Hydrodynamics + disjoining pressure | Thin-film / lubrication equation | Above melting / \(T_g\) | Spinodal undulations or nucleated holes → droplets |
-| **Solid-state dewetting (SSD)** | Capillary-driven **surface (and GB/interface) diffusion** | Mullins surface diffusion; faceted / anisotropic extensions | Well **below** \(T_m\) (often \(\sim 0.3\)–\(0.5\,T_m\)) | Hole nucleation → edge retraction + rim → pinch-off / Rayleigh breakup → islands |
+| **Liquid-film dewetting** | Hydrodynamics + disjoining pressure | Thin-film / lubrication equation | Above melting / $T_g$ | Spinodal undulations or nucleated holes → droplets |
+| **Solid-state dewetting (SSD)** | Capillary-driven **surface (and GB/interface) diffusion** | Mullins surface diffusion; faceted / anisotropic extensions | Well **below** $T_m$ (often $\sim 0.3$–$0.5\,T_m$) | Hole nucleation → edge retraction + rim → pinch-off / Rayleigh breakup → islands |
 
 ### Liquid films (brief)
 
-On a perfect homogeneous non-wetting substrate, **spinodal** (correlated \(\lambda_m \propto h^2\)) and **nucleation** compete (Bischof 1996; Xie 1998; Thiele 2001). The canonical model is the lubrication equation with \(\Pi(h)\) (Oron–Davis–Bankoff 1997). **Non-ideal substrates** add chemical-gradient instabilities, roughness templating, pinning vs coarsening on patterns, slip-induced mechanism switching, and fluctuation-driven rupture (Sections 1–6).
+On a perfect homogeneous non-wetting substrate, **spinodal** (correlated $\lambda_m \propto h^2$) and **nucleation** compete (Bischof 1996; Xie 1998; Thiele 2001). The canonical model is the lubrication equation with $\Pi(h)$ (Oron–Davis–Bankoff 1997). **Non-ideal substrates** add chemical-gradient instabilities, roughness templating, pinning vs coarsening on patterns, slip-induced mechanism switching, and fluctuation-driven rupture (Sections 1–6).
 
 ### Solid films on solid substrates (this update)
 
 Solid films are usually **metastable as deposited** and agglomerate when heated via **surface-energy minimization**, without melting (**Thompson**, *Annu. Rev. Mater. Res.* 2012). Key mechanistic ingredients that have **no liquid-film analogue**:
 
 1. **Grain-boundary (GB) grooving** (Mullins 1957) and **triple-junction pitting** (Srolovitz & Safran 1986) as hole-nucleation pathways in polycrystalline films.
-2. **Edge retraction with rim / valley** morphology governed by \(V_n = -B\nabla_s^2\kappa\) (isotropic) or faceted anisotropic kinetics (Ye & Thompson; Zucker *et al.*; Chame & Pierre-Louis).
+2. **Edge retraction with rim / valley** morphology governed by $V_n = -B\nabla_s^2\kappa$ (isotropic) or faceted anisotropic kinetics (Ye & Thompson; Zucker *et al.*; Chame & Pierre-Louis).
 3. **Surface-energy anisotropy** → orientation-dependent retraction rates, fingering vs stable facets, anisotropic Rayleigh-like breakup of wires (Kim & Thompson 2014).
 4. **Extra mass-transport paths:** GB diffusion, film–substrate interface diffusion, GB sliding (Rabkin group)—can suppress classical elevated rims.
 5. **Templated SSD** on patterned films or substrates for ordered nanoparticle arrays (Giermann & Thompson; Ye & Thompson).
 
-**Design implication:** Choose the model family by phase state. Liquid models need local \(\Pi(h,\mathbf{x})\), topography, and slip. Solid models need \(\gamma(\mathbf{n})\), contact angle / Young condition at the three-phase line, GB energies, diffusivities (\(D_s\), \(D_\mathrm{GB}\), \(D_\mathrm{int}\)), and whether the film is single-crystal or polycrystalline.
+**Design implication:** Choose the model family by phase state. Liquid models need local $\Pi(h,\mathbf{x})$, topography, and slip. Solid models need $\gamma(\mathbf{n})$, contact angle / Young condition at the three-phase line, GB energies, diffusivities ($D_s$, $D_\mathrm{GB}$, $D_\mathrm{int}$), and whether the film is single-crystal or polycrystalline.
 
 ---
 
@@ -37,32 +37,34 @@ Solid films are usually **metastable as deposited** and agglomerate when heated 
 
 ### 1.1 Thin-film equation and disjoining pressure
 
-For a film of thickness \(h(\mathbf{x},t)\) on a rigid substrate, the lubrication-scale evolution equation (schematic form) is:
+For a film of thickness $h(\mathbf{x},t)$ on a rigid substrate, the lubrication-scale evolution equation (schematic form) is:
 
-\[
+
+$$
 \frac{3\eta}{h^3}\,\partial_t h = \nabla\cdot\left(h^3 \nabla\bigl(\gamma \nabla^2 h - \Pi(h)\bigr)\right),
-\]
+$$
 
-where \(\eta\) is viscosity, \(\gamma\) air–liquid surface tension, and \(\Pi(h)\) the **disjoining pressure** from van der Waals, polar, structural, or electrostatic contributions. On a **uniform** non-wetting substrate, \(\Pi(h)\) is typically **destabilizing** at finite \(h\) (negative derivative \(\mathrm{d}\Pi/\mathrm{d}h < 0\) in the unstable window).
+
+where $\eta$ is viscosity, $\gamma$ air–liquid surface tension, and $\Pi(h)$ the **disjoining pressure** from van der Waals, polar, structural, or electrostatic contributions. On a **uniform** non-wetting substrate, $\Pi(h)$ is typically **destabilizing** at finite $h$ (negative derivative $\mathrm{d}\Pi/\mathrm{d}h < 0$ in the unstable window).
 
 **Oron, Davis & Bankoff** (*Rev. Mod. Phys.* 1997) unify derivations including van der Waals attractions, thermocapillarity, evaporation, and substrate curvature. [DOI 10.1103/RevModPhys.69.931](https://doi.org/10.1103/RevModPhys.69.931)
 
-**Mitlin** (1993) and **Brochard–Daillant** / **Vrij–Overbeek** established the analogy between dewetting and **spinodal decomposition**, with a fastest-growing wavenumber \(q_m\) and growth rate \(R_m\) depending on \(\Pi''(h)\), \(\gamma\), and \(\eta\).
+**Mitlin** (1993) and **Brochard–Daillant** / **Vrij–Overbeek** established the analogy between dewetting and **spinodal decomposition**, with a fastest-growing wavenumber $q_m$ and growth rate $R_m$ depending on $\Pi''(h)$, $\gamma$, and $\eta$.
 
 ### 1.2 Spinodal vs nucleation: thickness-dependent crossover
 
 Experiments on polymers and liquid metals established that **both** mechanisms coexist:
 
-- **Bischof, Scherer, Herminghaus & Leiderer** (*PRL* 1996): First unambiguous observation of **spinodal** surface waves in liquid Au/Cu/Ni on fused silica, distinct from **heterogeneous hole nucleation**; \(\lambda_m \propto h^2\). [DOI 10.1103/PhysRevLett.77.1536](https://doi.org/10.1103/PhysRevLett.77.1536)
-- **Xie, Karim, Douglas, Han & Weiss** (*PRL* 1998): PS on Si—thick films (\(h \gtrsim 10\) nm) nucleate holes; thinner films dewet spinodally with exponential growth of capillary-wave amplitude matching linear theory. [DOI 10.1103/PhysRevLett.81.1251](https://doi.org/10.1103/PhysRevLett.81.1251)
+- **Bischof, Scherer, Herminghaus & Leiderer** (*PRL* 1996): First unambiguous observation of **spinodal** surface waves in liquid Au/Cu/Ni on fused silica, distinct from **heterogeneous hole nucleation**; $\lambda_m \propto h^2$. [DOI 10.1103/PhysRevLett.77.1536](https://doi.org/10.1103/PhysRevLett.77.1536)
+- **Xie, Karim, Douglas, Han & Weiss** (*PRL* 1998): PS on Si—thick films ($h \gtrsim 10$ nm) nucleate holes; thinner films dewet spinodally with exponential growth of capillary-wave amplitude matching linear theory. [DOI 10.1103/PhysRevLett.81.1251](https://doi.org/10.1103/PhysRevLett.81.1251)
 - **Thiele, Velarde & Neuffer** (*PRL* 2001): Even inside the **linearly unstable** thickness band, a sub-range exists where **nucleation sets the final structure** and spinodal growth is negligible—important when interpreting “which mechanism wins.” [DOI 10.1103/PhysRevLett.87.016104](https://doi.org/10.1103/PhysRevLett.87.016104)
-- **Thiele, Mertig & Pompe** (*PRL* 1998): Evaporating films show **heterogeneous nucleation at large \(h\)** crossing over to **spinodal rupture below ~10 nm**; humidity shifts the balance. [DOI 10.1103/PhysRevLett.80.2869](https://doi.org/10.1103/PhysRevLett.80.2869)
+- **Thiele, Mertig & Pompe** (*PRL* 1998): Evaporating films show **heterogeneous nucleation at large $h$** crossing over to **spinodal rupture below ~10 nm**; humidity shifts the balance. [DOI 10.1103/PhysRevLett.80.2869](https://doi.org/10.1103/PhysRevLett.80.2869)
 
 **Becker, Grün, Seemann, Mantz, Jacobs, Mecke & Herminghaus** (*Nature Materials* 2002) catalog complex **late-stage morphologies** (fractals, polygonal networks) captured by thin-film models beyond linear theory. [DOI 10.1038/nmat788](https://doi.org/10.1038/nmat788)
 
 ### 1.3 Pseudo-dewetting and secondary minima
 
-When \(\Pi(h)\) has **two minima** (primary adsorbed layer + secondary metastable film), homogeneous-substrate spinodal breakup may stop at the **secondary minimum** (“pseudo-dewetting”) because true dry-out requires surmounting an **energy barrier**. **Chemical heterogeneity** can supply the gradient work to reach the primary minimum—central to Sharma-group models and the Kotni *et al.* (2022) review synthesis. [DOI 10.1080/01411594.2022.2094267](https://doi.org/10.1080/01411594.2022.2094267)
+When $\Pi(h)$ has **two minima** (primary adsorbed layer + secondary metastable film), homogeneous-substrate spinodal breakup may stop at the **secondary minimum** (“pseudo-dewetting”) because true dry-out requires surmounting an **energy barrier**. **Chemical heterogeneity** can supply the gradient work to reach the primary minimum—central to Sharma-group models and the Kotni *et al.* (2022) review synthesis. [DOI 10.1080/01411594.2022.2094267](https://doi.org/10.1080/01411594.2022.2094267)
 
 ---
 
@@ -72,11 +74,11 @@ Real substrates depart from uniformity along **chemistry**, **topography**, **hy
 
 | Imperfection | Model ingredient | Mechanistic consequence |
 |--------------|----------------|-------------------------|
-| Chemical patch / stripe | \(\Pi(h,\mathbf{x})\) or local Hamaker / spreading coefficient | **Gradient-driven flow**; localized rupture; templating; can destabilize stable films |
-| Roughness | \(h \to h - z_s(\mathbf{x})\); local curvature in \(\Pi\) | **Roughness-triggered rupture** vs spinodal wavelength selection |
+| Chemical patch / stripe | $\Pi(h,\mathbf{x})$ or local Hamaker / spreading coefficient | **Gradient-driven flow**; localized rupture; templating; can destabilize stable films |
+| Roughness | $h \to h - z_s(\mathbf{x})$; local curvature in $\Pi$ | **Roughness-triggered rupture** vs spinodal wavelength selection |
 | Topographic pattern (pillars, grooves) | Confinement + contact-line pinning | Reduced length scale; ordered droplet arrays; stick–slip rims |
 | Defects / dust | Heterogeneous nucleation boundary condition | Uncorrelated holes; shifts mechanism to nucleation |
-| Slip heterogeneity | \(b(\mathbf{x})\) in slip-enhanced thin-film equation | Alters dispersion relation; can **switch** spinodal ↔ nucleation |
+| Slip heterogeneity | $b(\mathbf{x})$ in slip-enhanced thin-film equation | Alters dispersion relation; can **switch** spinodal ↔ nucleation |
 | Thermal noise (nm films) | Stochastic lubrication equation | Lowers effective stability threshold; early-time spectra |
 
 ---
@@ -89,7 +91,7 @@ Real substrates depart from uniformity along **chemistry**, **topography**, **hy
 
 Key predictions (simulations + theory):
 
-- Rupture time **\(\propto 1/\)**(potential difference across heterogeneity).
+- Rupture time **$\propto 1/$**(potential difference across heterogeneity).
 - Can be **orders of magnitude faster** than homogeneous spinodal dewetting.
 - **Spinodally stable** films may rupture.
 - Morphologies: **ripples**, **castle–moat**, radial structures; holes may form **without** prior spinodal undulations.
@@ -102,12 +104,12 @@ Key predictions (simulations + theory):
 
 **Kargupta & Sharma** (*PRL* 2001; *JCIS* 2002; *JCP* 2002) formulate **templating rules** for alternating wettable / less-wettable stripes:
 
-- Ideal replication of substrate pattern requires stripe period **\(> \lambda_h\)** (heterogeneous instability length, near spinodal \(\lambda_m\)) and sufficiently narrow less-wettable stripes.
+- Ideal replication of substrate pattern requires stripe period **$> \lambda_h$** (heterogeneous instability length, near spinodal $\lambda_m$) and sufficiently narrow less-wettable stripes.
 - Closely spaced destabilizing sites can be **silenced** (“not all sites stay live”) by hydrodynamic coupling.
 
 [DOI 10.1103/PhysRevLett.86.4536](https://doi.org/10.1103/PhysRevLett.86.4536) · [DOI 10.1006/jcis.2001.7860](https://doi.org/10.1006/jcis.2001.7860)
 
-**Thiele, Mertig, Pompe** (*Eur. Phys. J. E* 2003) and **Brusch, Kühne, Thiele & Bär** (*Phys. Rev. E* 2002) analyze **pinning vs coarsening** on periodic templates using bifurcation theory. Substrate modulation enters as \(\kappa(x) = 1 + \varepsilon\cos(2\pi x/P_\mathrm{het})\) scaling disjoining pressure. **Weak heterogeneity** can pin desired stripe patterns if \(P_\mathrm{het}\) exceeds the critical spinodal period; a broad **multistability** region separates pinned and coarsened states. [DOI 10.1103/PhysRevE.66.011602](https://doi.org/10.1103/PhysRevE.66.011602) · [DOI 10.1140/epje/i2003-10019-5](https://doi.org/10.1140/epje/i2003-10019-5)
+**Thiele, Mertig, Pompe** (*Eur. Phys. J. E* 2003) and **Brusch, Kühne, Thiele & Bär** (*Phys. Rev. E* 2002) analyze **pinning vs coarsening** on periodic templates using bifurcation theory. Substrate modulation enters as $\kappa(x) = 1 + \varepsilon\cos(2\pi x/P_\mathrm{het})$ scaling disjoining pressure. **Weak heterogeneity** can pin desired stripe patterns if $P_\mathrm{het}$ exceeds the critical spinodal period; a broad **multistability** region separates pinned and coarsened states. [DOI 10.1103/PhysRevE.66.011602](https://doi.org/10.1103/PhysRevE.66.011602) · [DOI 10.1140/epje/i2003-10019-5](https://doi.org/10.1140/epje/i2003-10019-5)
 
 ### 3.3 Shape of heterogeneity and dry-spot nucleation
 
@@ -129,11 +131,11 @@ Key predictions (simulations + theory):
 
 ### 4.1 Roughness vs spinodal wavelength (Volodin–Kondyurin)
 
-**Volodin & Kondyurin** (*J. Phys. D* 2008, theory + experiment on etched Si) give a clear **phase diagram** in \((\lambda_\mathrm{rough}, A_\mathrm{rough}, h)\):
+**Volodin & Kondyurin** (*J. Phys. D* 2008, theory + experiment on etched Si) give a clear **phase diagram** in $(\lambda_\mathrm{rough}, A_\mathrm{rough}, h)$:
 
-1. \(\lambda_\mathrm{rough} \gg \lambda_\mathrm{spinodal}\) → **spinodal dewetting** (roughness merely perturbs).
-2. \(\lambda_\mathrm{rough} < \lambda_\mathrm{spinodal}\) and **roughness amplitude large** vs \(h\) → **roughness-templated** breakup; dewetted pattern **replicates** substrate periodicity.
-3. \(\lambda_\mathrm{rough} < \lambda_\mathrm{spinodal}\) but **small amplitude** → spinodal dewetting proceeds.
+1. $\lambda_\mathrm{rough} \gg \lambda_\mathrm{spinodal}$ → **spinodal dewetting** (roughness merely perturbs).
+2. $\lambda_\mathrm{rough} < \lambda_\mathrm{spinodal}$ and **roughness amplitude large** vs $h$ → **roughness-templated** breakup; dewetted pattern **replicates** substrate periodicity.
+3. $\lambda_\mathrm{rough} < \lambda_\mathrm{spinodal}$ but **small amplitude** → spinodal dewetting proceeds.
 
 [DOI 10.1088/0022-3727/41/6/065306](https://doi.org/10.1088/0022-3727/41/6/065306) · [DOI 10.1088/0022-3727/41/6/065307](https://doi.org/10.1088/0022-3727/41/6/065307)
 
@@ -149,9 +151,9 @@ Key predictions (simulations + theory):
 
 ## 5. Slip, viscosity, and mechanism switching
 
-On **high-slip** substrates (e.g., PS on hydrophobic DTS SAM vs SiO\(_2\)), **Lessel, McGraw, Bäumchen & Jacobs** (*arXiv:1701 / Langmuir ecosystem*, 2017) show:
+On **high-slip** substrates (e.g., PS on hydrophobic DTS SAM vs SiO$_2$), **Lessel, McGraw, Bäumchen & Jacobs** (*arXiv:1701 / Langmuir ecosystem*, 2017) show:
 
-- SiO\(_2\) (no-slip): **spinodal** breakup with correlated holes.
+- SiO$_2$ (no-slip): **spinodal** breakup with correlated holes.
 - DTS (strong slip): **random nucleation** despite similar thermodynamic instability; Minkowski functional analysis excludes spinodal correlations.
 - Nucleation barrier model with conical hole profile gives critical radii comparable to **unsupported films**.
 
@@ -168,13 +170,13 @@ Even nominally homogeneous substrates often dewet by **heterogeneous nucleation*
 - Dust, voids, oxide patches, local SAM defects, and **delamination buckles** (Stange & Evans 1997) seed holes.
 - **Jacobs *et al.*** (*Langmuir* 1998) emphasized air bubbles and defects mimicking spinodal hole density scaling.
 
-**Practical reading:** A **random hole distribution** usually signals nucleation on defects; **correlated length scales** (\(q_m h \sim \mathcal{O}(1)\)) support spinodal instability. On imperfect substrates, **both** may operate in parallel (Bischof 1996; Thiele 1998).
+**Practical reading:** A **random hole distribution** usually signals nucleation on defects; **correlated length scales** ($q_m h \sim \mathcal{O}(1)$) support spinodal instability. On imperfect substrates, **both** may operate in parallel (Bischof 1996; Thiele 1998).
 
 ---
 
 ## 7. Solid-state dewetting of solid films on solid substrates
 
-Solid films on poorly wetting substrates are typically **metastable**. When heated **below \(T_m\)**, atoms rearrange by **solid-state diffusion** (primarily surface self-diffusion) to reduce total surface + interface energy, forming holes, retracting edges, and eventually islands (**agglomeration**). This is **solid-state dewetting (SSD)**—reviewed comprehensively by **Carl V. Thompson**, *Annu. Rev. Mater. Res.* **42**, 399 (2012). [DOI 10.1146/annurev-matsci-070511-155048](https://doi.org/10.1146/annurev-matsci-070511-155048)
+Solid films on poorly wetting substrates are typically **metastable**. When heated **below $T_m$**, atoms rearrange by **solid-state diffusion** (primarily surface self-diffusion) to reduce total surface + interface energy, forming holes, retracting edges, and eventually islands (**agglomeration**). This is **solid-state dewetting (SSD)**—reviewed comprehensively by **Carl V. Thompson**, *Annu. Rev. Mater. Res.* **42**, 399 (2012). [DOI 10.1146/annurev-matsci-070511-155048](https://doi.org/10.1146/annurev-matsci-070511-155048)
 
 SSD is technologically dual-use: a failure mode for interconnects and continuous films, and a fabrication route for nanoparticle / nanowire catalyst arrays via templated dewetting.
 
@@ -182,37 +184,39 @@ SSD is technologically dual-use: a failure mode for interconnects and continuous
 
 | Aspect | Liquid film | Solid film |
 |--------|-------------|------------|
-| Driving force | Capillarity + \(\Pi(h)\) | Capillarity (\(\gamma\), \(\gamma_\mathrm{int}\)); wetting factor \(E_s = \gamma_A + \gamma_{AB} - \gamma_B\) |
+| Driving force | Capillarity + $\Pi(h)$ | Capillarity ($\gamma$, $\gamma_\mathrm{int}$); wetting factor $E_s = \gamma_A + \gamma_{AB} - \gamma_B$ |
 | Kinetics | Viscous flow | Surface diffusion (Mullins); often GB / interface diffusion |
-| Continuum PDE | 2nd-order lubrication | 4th-order Mullins: \(V_n = -B\nabla_s^2\kappa\) |
-| Anisotropy | Weak (contact angle) | Strong: facets, orientation-dependent \(D_s\), \(\gamma(\mathbf{n})\) |
+| Continuum PDE | 2nd-order lubrication | 4th-order Mullins: $V_n = -B\nabla_s^2\kappa$ |
+| Anisotropy | Weak (contact angle) | Strong: facets, orientation-dependent $D_s$, $\gamma(\mathbf{n})$ |
 | Microstructure | Usually continuum fluid | Grains, GBs, triple junctions, epitaxy |
 | Hole nucleation | Spinodal / defects | GB grooves, triple pits, interface voids, film edges |
 
 **Chame & Pierre-Louis** (*C. R. Physique* 2013) review continuum models for ultrathin solid films and contrast **faceted vs non-faceted** rims: faceting corrects front speeds, strongly anisotropizes morphological instability, and enables **layer-by-layer** and **monolayer** dewetting regimes. [DOI 10.1016/j.crhy.2013.06.004](https://doi.org/10.1016/j.crhy.2013.06.004)
 
-**Cheynis *et al.*** (*C. R. Physique* 2013) compare 1D/2D continuum predictions to Si(001)/SiO\(_2\) and Ge(001)/SiO\(_2\) LEEM+AFM: faceted edges recede at **constant shape**; poorly faceted edges **finger**; rim thickening can be **layer-by-layer** (2D nucleation–limited on the rim top), differing from isotropic “mass-shedding” models. [DOI 10.1016/j.crhy.2013.06.006](https://doi.org/10.1016/j.crhy.2013.06.006)
+**Cheynis *et al.*** (*C. R. Physique* 2013) compare 1D/2D continuum predictions to Si(001)/SiO$_2$ and Ge(001)/SiO$_2$ LEEM+AFM: faceted edges recede at **constant shape**; poorly faceted edges **finger**; rim thickening can be **layer-by-layer** (2D nucleation–limited on the rim top), differing from isotropic “mass-shedding” models. [DOI 10.1016/j.crhy.2013.06.006](https://doi.org/10.1016/j.crhy.2013.06.006)
 
 ### 7.2 Continuum backbone: Mullins surface diffusion
 
 For isotropic surface energy, the normal velocity of the free surface is
 
-\[
+
+$$
 V_n = -B\,\nabla_s^2\kappa,\qquad
 B = \frac{D_s\gamma\Omega^2\nu}{k_BT},
-\]
+$$
 
-where \(\kappa\) is mean curvature, \(D_s\) surface diffusivity, \(\Omega\) atomic volume, \(\nu\) surface atomic density. At a film edge, the **curvature gradient** drives mass from the three-phase contact toward the film, producing a **thickened rim** and often a **valley** ahead of the rim. When the valley reaches the substrate, **pinch-off** disconnects a wire/strand that later breaks by a **Rayleigh-like** instability into particles.
 
-**Zucker, Kim, Carter & Thompson** (*C. R. Physique* 2013) model **fully faceted** edge retraction (2D) for highly anisotropic films; agreement with single-crystal Ni on MgO; identify film thickness, top-facet diffusivity, contact angle, and absolute \(\gamma\) as dominant rate factors. Fully faceted rims with equilibrium top facets **suppress classical valley pinch-off**, though pinch-off can still occur by film thinning. [DOI 10.1016/j.crhy.2013.06.005](https://doi.org/10.1016/j.crhy.2013.06.005)
+where $\kappa$ is mean curvature, $D_s$ surface diffusivity, $\Omega$ atomic volume, $\nu$ surface atomic density. At a film edge, the **curvature gradient** drives mass from the three-phase contact toward the film, producing a **thickened rim** and often a **valley** ahead of the rim. When the valley reaches the substrate, **pinch-off** disconnects a wire/strand that later breaks by a **Rayleigh-like** instability into particles.
 
-Phase-field formulations for SSD (isotropic and anisotropic) include **Jiang, Bao, Thompson & Srolovitz**, *Acta Mater.* 2012. [DOI 10.1016/j.actamat.2012.07.002](https://doi.org/10.1016/j.actamat.2012.07.002) Sharp-interface models on **curved / pre-patterned substrates** show particle migration \(\propto\) substrate curvature gradient and templated periodic categories (**Jiang, Wang, Srolovitz & Bao**, *Phys. Rev. Mater.* 2018). [DOI 10.1103/PhysRevMaterials.2.113401](https://doi.org/10.1103/PhysRevMaterials.2.113401)
+**Zucker, Kim, Carter & Thompson** (*C. R. Physique* 2013) model **fully faceted** edge retraction (2D) for highly anisotropic films; agreement with single-crystal Ni on MgO; identify film thickness, top-facet diffusivity, contact angle, and absolute $\gamma$ as dominant rate factors. Fully faceted rims with equilibrium top facets **suppress classical valley pinch-off**, though pinch-off can still occur by film thinning. [DOI 10.1016/j.crhy.2013.06.005](https://doi.org/10.1016/j.crhy.2013.06.005)
+
+Phase-field formulations for SSD (isotropic and anisotropic) include **Jiang, Bao, Thompson & Srolovitz**, *Acta Mater.* 2012. [DOI 10.1016/j.actamat.2012.07.002](https://doi.org/10.1016/j.actamat.2012.07.002) Sharp-interface models on **curved / pre-patterned substrates** show particle migration $\propto$ substrate curvature gradient and templated periodic categories (**Jiang, Wang, Srolovitz & Bao**, *Phys. Rev. Mater.* 2018). [DOI 10.1103/PhysRevMaterials.2.113401](https://doi.org/10.1103/PhysRevMaterials.2.113401)
 
 ### 7.3 Polycrystalline films: GB grooving as the “substrate imperfection”
 
 In polycrystalline SSD, **grain boundaries are intrinsic film heterogeneities** analogous to chemical patches in liquid films.
 
-**Mullins** (*J. Appl. Phys.* 1957): thermal grooving where a GB meets the free surface; groove depth grows as \(t^{1/4}\) (surface diffusion). [DOI 10.1063/1.1722742](https://doi.org/10.1063/1.1722742)
+**Mullins** (*J. Appl. Phys.* 1957): thermal grooving where a GB meets the free surface; groove depth grows as $t^{1/4}$ (surface diffusion). [DOI 10.1063/1.1722742](https://doi.org/10.1063/1.1722742)
 
 **Srolovitz & Safran** (*J. Appl. Phys.* 1986, I Energetics + II Kinetics): capillary stability of thin films; holes grow or shrink about a **critical radius**; equilibrium GB groove depths for finite grain size; comparison of groove depth to film thickness gives **microstructural rupture criteria**; **pits at GB vertices** (triple junctions) are preferential nucleation sites. [DOI 10.1063/1.337689](https://doi.org/10.1063/1.337689) · [DOI 10.1063/1.337691](https://doi.org/10.1063/1.337691)
 
@@ -236,10 +240,10 @@ Recent phase-field studies of concurrent **grooving + grain growth** (Verma, Muk
 
 ### 7.4 Single-crystal films: anisotropy, edge retraction, templating
 
-Single-crystal films (e.g. Ni/MgO, Si/SiO\(_2\)) isolate **surface-energy anisotropy** from GB effects:
+Single-crystal films (e.g. Ni/MgO, Si/SiO$_2$) isolate **surface-energy anisotropy** from GB effects:
 
 - **Ye & Thompson** (*Acta Mater.* 2011; *PRB* 2010; *Adv. Mater.* 2011): anisotropic edge retraction and hole growth; regular pattern formation by retraction + pinch-off of patterned patches; templated SSD for complex patterns. Corner accumulation, valley merging vs pinch-off depend on patch size and crystallographic edge orientation.
-- **Kim & Thompson** (*Acta Mater.* 2014): Rayleigh-like breakup of dewetted wires; particle spacing \(\propto R_0\) but strongly orientation-dependent via \(\gamma''/\gamma\) (Cahn-type anisotropy); KMC supports anisotropy control of \(\lambda_p\). [DOI 10.1016/j.actamat.2014.10.028](https://doi.org/10.1016/j.actamat.2014.10.028)
+- **Kim & Thompson** (*Acta Mater.* 2014): Rayleigh-like breakup of dewetted wires; particle spacing $\propto R_0$ but strongly orientation-dependent via $\gamma''/\gamma$ (Cahn-type anisotropy); KMC supports anisotropy control of $\lambda_p$. [DOI 10.1016/j.actamat.2014.10.028](https://doi.org/10.1016/j.actamat.2014.10.028)
 - **Kim, Giermann & Thompson** (*APL* 2009): patterned Au lines/rectangles → ordered particle arrays; design maps in length–width–thickness space. [DOI 10.1063/1.3268477](https://doi.org/10.1063/1.3268477)
 - **Giermann & Thompson** (*APL* 2005): topographic templating for crystallographically oriented particle arrays. [DOI 10.1063/1.1885180](https://doi.org/10.1063/1.1885180)
 
@@ -247,16 +251,16 @@ Single-crystal films (e.g. Ni/MgO, Si/SiO\(_2\)) isolate **surface-energy anisot
 
 - Patterned **film** edges prescribe nucleation geometry (like chemical stripes).
 - Patterned **substrate** topography templates particle positions (like roughness templating).
-- Substrate crystallinity / adhesion: e.g. void formation enhanced on amorphous vs crystalline Si\(_3\)N\(_4\) under Pt (cited in Cheynis review).
-- Ambient (H\(_2\), O\(_2\)) changes surface energies and can switch hole morphologies (Kosinova *et al.* on Au–sapphire).
+- Substrate crystallinity / adhesion: e.g. void formation enhanced on amorphous vs crystalline Si$_3$N$_4$ under Pt (cited in Cheynis review).
+- Ambient (H$_2$, O$_2$) changes surface energies and can switch hole morphologies (Kosinova *et al.* on Au–sapphire).
 
 ### 7.5 Mechanistic checklist for solid films
 
 1. **Single-crystal or polycrystalline?** If poly: include Mullins grooving + triple pits + grain growth / AGG.
-2. Parameterize \(B\) (or facet-wise \(D_s\)), \(\gamma(\mathbf{n})\), \(\gamma_\mathrm{GB}\), \(\gamma_\mathrm{int}\), contact angle / Young condition.
+2. Parameterize $B$ (or facet-wise $D_s$), $\gamma(\mathbf{n})$, $\gamma_\mathrm{GB}$, $\gamma_\mathrm{int}$, contact angle / Young condition.
 3. Identify nucleation path: edge / lithographic pattern vs GB groove vs interface void.
 4. Check for **non-surface** paths (GB, interface diffusion, sliding) if rims are flat or mass appears in distant hillocks.
-5. Late stage: rim fingering vs stable facets; pinch-off; Rayleigh-like strand breakup with anisotropy-corrected \(\lambda_\mathrm{crit}\).
+5. Late stage: rim fingering vs stable facets; pinch-off; Rayleigh-like strand breakup with anisotropy-corrected $\lambda_\mathrm{crit}$.
 
 ```mermaid
 flowchart TD
@@ -304,14 +308,14 @@ flowchart TD
 
 **Liquid films**
 
-1. Parameterize \(\gamma\), \(\eta\), \(\Pi(h)\) and secondary minima if present.
-2. Map substrate to \(\Pi(h,\mathbf{x})\), \(z_s(\mathbf{x})\), slip \(b(\mathbf{x})\).
+1. Parameterize $\gamma$, $\eta$, $\Pi(h)$ and secondary minima if present.
+2. Map substrate to $\Pi(h,\mathbf{x})$, $z_s(\mathbf{x})$, slip $b(\mathbf{x})$.
 3. Linear stability / bifurcation (homogeneous or patterned).
-4. Compare \(\lambda_m\), \(\lambda_h\), \(P_\mathrm{het}\), \(\lambda_\mathrm{rough}\).
+4. Compare $\lambda_m$, $\lambda_h$, $P_\mathrm{het}$, $\lambda_\mathrm{rough}$.
 
 **Solid films**
 
-1. Crystallinity, \(\gamma(\mathbf{n})\), \(B\) / facet diffusivities, \(\gamma_\mathrm{GB}\), \(\gamma_\mathrm{int}\).
+1. Crystallinity, $\gamma(\mathbf{n})$, $B$ / facet diffusivities, $\gamma_\mathrm{GB}$, $\gamma_\mathrm{int}$.
 2. Nucleation path (edge, GB, triple junction, interface void).
 3. Mass-transport inventory (surface vs GB vs interface).
 4. Late-stage Rayleigh / pinch-off with anisotropy.
@@ -321,12 +325,12 @@ flowchart TD
 ## 9. Open questions and modeling gaps
 
 1. **Coupled chemo-topographic defects (liquids):** Chemical and physical heterogeneity usually treated separately.
-2. **Viscoelastic / glassy films:** Entanglement and sub-\(T_g\) dynamics blur spinodal vs nucleation identification.
+2. **Viscoelastic / glassy films:** Entanglement and sub-$T_g$ dynamics blur spinodal vs nucleation identification.
 3. **Polycrystalline SSD with concurrent grain growth:** Quantitative 3D criteria for when AGG stagnates holes vs when GBs accelerate them (phase-field advancing; experiments system-specific).
 4. **Multi-path mass transport:** Unified models coupling surface + GB + interface diffusion + sliding still incomplete for predictive design maps across FCC vs BCC metals.
 5. **Stress and elasticity:** Residual / thermal mismatch stress couples to void nucleation at interfaces—under-integrated in many capillary-only models.
 6. **Liquid ↔ solid crossover:** Laser-melted metal films (Bischof 1996) sit between families; hybrid models remain sparse.
-7. **Inverse design:** Inferring \(\gamma(\mathbf{n})\) or surface-energy patterns from early morphologies (Richter 2025 for liquids; analogous SSD inverse problems less mature).
+7. **Inverse design:** Inferring $\gamma(\mathbf{n})$ or surface-energy patterns from early morphologies (Richter 2025 for liquids; analogous SSD inverse problems less mature).
 
 ---
 
