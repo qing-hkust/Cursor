@@ -15,6 +15,10 @@ Delegate with the Task tool / `@` to the matching subagent. Each folder also has
 
 Details: [docs/agent-organization.md](docs/agent-organization.md).
 
+## Markdown math
+
+Use GitHub-friendly delimiters in notes: inline `$...$`, display `$$...$$` (not `\(...\)` / `\[...\]`).
+
 ## Environment
 
 - Python 3.12; deps in `requirements.txt`; install via `.cursor/environment.json` (keep lean)

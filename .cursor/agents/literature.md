@@ -17,6 +17,7 @@ You are the literature-review agent for this workspace.
 - Produce structured markdown digests with clear claims, caveats, and source links.
 - Prefer web/search MCP tools when available; do not invent citations.
 - One topic or question per run; keep files scannable (title, summary, key papers, open questions).
+- For equations, use GitHub-friendly math: inline `$...$`, display `$$...$$` on their own lines. Do not use `\(...\)` or `\[...\]`.
 
 ## Don't
 

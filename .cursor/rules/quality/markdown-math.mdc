@@ -1,0 +1,13 @@
+---
+description: GitHub-friendly math delimiters in markdown notes
+alwaysApply: true
+---
+
+# Markdown math
+
+When writing equations in `.md` files (especially under `literature/`, `writing/`, `course-prep/`):
+
+- Inline math: `$...$` (not `\(...\)`)
+- Display math: `$$...$$` on their own lines (not `\[...\]`)
+
+This matches GitHub rendering and common Markdown preview tools.
