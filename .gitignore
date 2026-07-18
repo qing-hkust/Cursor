@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+
+# Large / local-only research artifacts (keep scripts in git; leave bulky outputs out)
+simulation/runs/
+simulation/outputs/
+data-analysis/raw/
+*.h5
+*.hdf5
+*.nc
+*.ckpt
+*.pt
+*.pth

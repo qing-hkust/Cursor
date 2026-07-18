@@ -1,0 +1,11 @@
+---
+description: PR and change hygiene for category-scoped agent work
+alwaysApply: false
+---
+
+# PR hygiene
+
+- Scope edits to one category folder when possible; avoid cross-folder drive-bys.
+- If plot output changes, note verification via `python3 data-analysis/example_scientific_plot.py`.
+- Do not commit secrets, large raw datasets, or simulation dumps — gitignore or external storage.
+- Prefer small reviewable diffs and a short PR summary naming the category + outcome.

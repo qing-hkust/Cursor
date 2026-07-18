@@ -1,0 +1,12 @@
+---
+description: Route work to category folders and matching subagents
+alwaysApply: true
+---
+
+# Category routing
+
+- Primary categories: `simulation`, `data-analysis`, `literature`, `writing`, `course-prep`, `chore`.
+- Prefer delegating to `.cursor/agents/<category>.md` when the task matches.
+- Put outputs in the matching folder; shared libraries go in `shared/`.
+- Cloud agents only see this git repo — no laptop-only paths unless documented.
+- Keep `.cursor/environment.json` lean. Verify plots with `python3 data-analysis/example_scientific_plot.py`.
