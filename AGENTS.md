@@ -33,3 +33,7 @@ python3 data-analysis/example_scientific_plot.py
 
 - **Cloud:** literature, course-prep, chore, batch data-analysis
 - **Local/HPC:** interactive writing, exploratory analysis, heavy simulation
+
+## Cloud agent PRs (default)
+
+Unless asked otherwise: open PRs as **ready for review** (not draft) and **merge** them after push. Details: `.cursor/rules/quality/pr-hygiene.mdc`.

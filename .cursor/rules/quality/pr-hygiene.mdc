@@ -1,6 +1,6 @@
 ---
 description: PR and change hygiene for category-scoped agent work
-alwaysApply: false
+alwaysApply: true
 ---
 
 # PR hygiene
@@ -9,3 +9,14 @@ alwaysApply: false
 - If plot output changes, note verification via `python3 data-analysis/example_scientific_plot.py`.
 - Do not commit secrets, large raw datasets, or simulation dumps — gitignore or external storage.
 - Prefer small reviewable diffs and a short PR summary naming the category + outcome.
+
+## Default PR lifecycle (this workspace)
+
+Unless the user explicitly asks otherwise, for every feature branch this agent opens:
+
+1. **Create the PR as ready for review** — `ManagePullRequest` with `draft: false` (not draft).
+2. **Merge the PR** after a successful push — use `gh pr merge <n> --merge` (delete the remote branch when safe).
+3. **Resolve blockers** before merge when needed: rebase/merge `main`, fix conflicts, re-push, then merge.
+4. If `ManagePullRequest` cannot create/update, fall back to `gh` for ready/merge status changes the user has authorized.
+
+Do **not** leave agent work sitting as an open draft PR by default.
