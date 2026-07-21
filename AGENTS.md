@@ -17,7 +17,7 @@ Details: [docs/agent-organization.md](docs/agent-organization.md).
 
 ## Markdown math
 
-Use GitHub-friendly delimiters in notes: inline `$...$`, display `$$...$$` (not `\(...\)` / `\[...\]`).
+Use GitHub-friendly delimiters in notes: inline `$`...`$` (e.g. `` $`D_s`$ ``), display `$$...$$` (not plain `$...$`, `\(...\)`, or `\[...\]`).
 
 ## Environment
 

@@ -7,7 +7,9 @@ alwaysApply: true
 
 When writing equations in `.md` files (especially under `literature/`, `writing/`, `course-prep/`):
 
-- Inline math: `$...$` (not `\(...\)`)
-- Display math: `$$...$$` on their own lines (not `\[...\]`)
+- **Inline math:** `$`...`$` (dollar + backtick). Example: `` $`D_s`$ ``, `` $`\gamma_{\mathrm{int}}`$ ``.
+  - Do **not** use plain `$...$` for inline math. GitHub’s Markdown emphasis parser treats `_` (and similar) inside `$...$` as italics, so `$D_s$` breaks.
+  - Do **not** use `\(...\)`.
+- **Display math:** `$$...$$` on their own lines (not `\[...\]`). Display blocks are fine with ordinary `_` subscripts.
 
-This matches GitHub rendering and common Markdown preview tools.
+This matches [GitHub’s math syntax](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions): `$`...`$` shields expressions that overlap Markdown syntax.

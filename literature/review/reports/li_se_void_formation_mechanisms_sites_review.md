@@ -10,7 +10,7 @@
 
 ## Executive summary
 
-During **discharge (stripping)**, Li is oxidized at the Li|SE contact and leaves the anode as $\mathrm{Li}^+$. If atoms/vacancies cannot rearrange fast enough to keep a continuous solid–solid contact, **voids** open, interfacial resistance rises, current constricts at remaining contact patches, and subsequent **plating** is more likely to form filaments/dendrites near those patches (Kassem & McCarthy 2019; Raj *et al.* 2022).
+During **discharge (stripping)**, Li is oxidized at the Li|SE contact and leaves the anode as $`\mathrm{Li}^+`$. If atoms/vacancies cannot rearrange fast enough to keep a continuous solid–solid contact, **voids** open, interfacial resistance rises, current constricts at remaining contact patches, and subsequent **plating** is more likely to form filaments/dendrites near those patches (Kassem & McCarthy 2019; Raj *et al.* 2022).
 
 The literature does **not** agree on a single nucleation story. Competing (and sometimes complementary) pictures are:
 
@@ -20,7 +20,7 @@ The literature does **not** agree on a single nucleation story. Competing (and s
 | **Growth of pre-existing interfacial defects** | As-assembled pores/asperities trap vacancies and grow; creep-enhanced vacancy flux needed to heal | **Pre-existing pores**, roughness pits, imperfect contact patches on SE | Yan *et al.* 2021; Lu *et al.* 2022 |
 | **Flux focusing + creep around imperfections** | Current concentrates at edges of contact / impurities; power-law creep grows voids | **Impurity particles**, contact-patch perimeters, micro-void edges | Shishvan / Fleck / Deshpande / McMeeking series |
 | **Solute / insulating deposit coverage** | Impurities/solutes left behind by stripping reduce contact area (may not need classical void growth) | **Deposited solute islands** on the SE face | Agier *et al.*; Shishvan failure reviews |
-| **Heterogeneous kinetics (GB, facets, chemistry)** | Local $k$, $D$, adhesion vary in space → pits form where stripping is fast or healing is slow | **Li grain interiors** (not Li GBs as sinks); SE GBs as current hotspots; lithiophobic chemistries (LiF-like); specific Li facets | Fuchs EBSD; Yoon MD; Banerjee 2025–2026; Feng & Qi 2022 |
+| **Heterogeneous kinetics (GB, facets, chemistry)** | Local $`k`$, $`D`$, adhesion vary in space → pits form where stripping is fast or healing is slow | **Li grain interiors** (not Li GBs as sinks); SE GBs as current hotspots; lithiophobic chemistries (LiF-like); specific Li facets | Fuchs EBSD; Yoon MD; Banerjee 2025–2026; Feng & Qi 2022 |
 
 **Site–mechanism rule of thumb:**  
 - If voids grow from **as-built gaps / SE roughness**, think **defect-trapping + creep healing** (Yan).  
@@ -41,10 +41,10 @@ The literature does **not** agree on a single nucleation story. Competing (and s
 
 ### 1.2 Operando picture
 
-- **Krauskopf, Mogwitz, Janek *et al.*** (*Adv. Energy Mater.* 2019): operando GEIS on Li and Li–Mg | LLZO — pore formation tied to **slow vacancy/Li transport**; $T$ and stack pressure shift time-to-contact-loss. [10.1002/aenm.201902568](https://doi.org/10.1002/aenm.201902568)
+- **Krauskopf, Mogwitz, Janek *et al.*** (*Adv. Energy Mater.* 2019): operando GEIS on Li and Li–Mg | LLZO — pore formation tied to **slow vacancy/Li transport**; $`T`$ and stack pressure shift time-to-contact-loss. [10.1002/aenm.201902568](https://doi.org/10.1002/aenm.201902568)
 - **Lu *et al.*** (*Sci. Adv.* 2022): voids in working cells; stack pressure and current jointly control void evolution. [10.1126/sciadv.add0510](https://doi.org/10.1126/sciadv.add0510)
 - **Lee, Kazyak, Sakamoto** (*Joule* 2022): void formation and partial **rewetting** on plating for thin Li on LLZO. [10.1016/j.joule.2022.09.009](https://doi.org/10.1016/j.joule.2022.09.009)
-- **Zaman *et al.*** (*ACS Appl. Mater. Interfaces* 2023): some voids become **unrecoverable** depending on $T$–$P$ history. [10.1021/acsami.3c05886](https://doi.org/10.1021/acsami.3c05886)
+- **Zaman *et al.*** (*ACS Appl. Mater. Interfaces* 2023): some voids become **unrecoverable** depending on $`T`$–$`P`$ history. [10.1021/acsami.3c05886](https://doi.org/10.1021/acsami.3c05886)
 
 Plating can partially heal contact, but stripping-induced morphology often sets where filaments nucleate later.
 
@@ -67,7 +67,7 @@ J_{\mathrm{diffusion}} + J_{\mathrm{creep}} + J_{\mathrm{surface}}
 \quad\text{(vacancies / atoms rearranged)}.
 $$
 
-Voids grow when $J_{\mathrm{migration}}$ persistently exceeds the sum of healing fluxes over a contact region.
+Voids grow when $`J_{\mathrm{migration}}`$ persistently exceeds the sum of healing fluxes over a contact region.
 
 ### 2.2 Vacancy generation and diffusion (classical stripping narrative)
 
@@ -85,7 +85,7 @@ favoring injection into the bulk (lithiophilic / complete wetting). [10.1039/d1t
 
 - **Yang & Mo** (*Adv. Mater.* 2021): MD — coherent interfaces sustain stripping longer at low pressure because carriers form and migrate into bulk; incoherent interfaces pore earlier. [10.1002/adma.202008081](https://doi.org/10.1002/adma.202008081)
 
-- **Feng, Yang & Qi** (*J. Electrochem. Soc.* 2022): Li/Li$_2$O (lithiophilic) vs Li/LiF (lithiophobic) KMC — lithiophobic chemistry needs much higher pressure to keep the interface flat. [10.1149/1945-7111/ac91aa](https://doi.org/10.1149/1945-7111/ac91aa)
+- **Feng, Yang & Qi** (*J. Electrochem. Soc.* 2022): Li/Li$`_2`$O (lithiophilic) vs Li/LiF (lithiophobic) KMC — lithiophobic chemistry needs much higher pressure to keep the interface flat. [10.1149/1945-7111/ac91aa](https://doi.org/10.1149/1945-7111/ac91aa)
 
 **Challenge to homogeneous vacancy coalescence:**
 
@@ -99,8 +99,8 @@ This does **not** erase vacancy physics; it pushes the field toward **heterogene
 
 | Interface type | Dominant healing path | Implication for sites |
 |----------------|----------------------|------------------------|
-| Ideal flat | Interfacial vacancy diffusion into bulk can suffice even at low $P$ (KMC-like) | Nucleation hard; uniform thinning |
-| Non-ideal with **pre-existing pores** | Vacancies are **trapped by defect surfaces** (TLK-like); $J_{\mathrm{diffusion}}$ drops; **$J_{\mathrm{creep}}$** under stack pressure must carry vacancies into bulk | Voids grow from **as-built interfacial defects** |
+| Ideal flat | Interfacial vacancy diffusion into bulk can suffice even at low $`P`$ (KMC-like) | Nucleation hard; uniform thinning |
+| Non-ideal with **pre-existing pores** | Vacancies are **trapped by defect surfaces** (TLK-like); $`J_{\mathrm{diffusion}}`$ drops; **$`J_{\mathrm{creep}}`$** under stack pressure must carry vacancies into bulk | Voids grow from **as-built interfacial defects** |
 
 [10.1002/aenm.202102283](https://doi.org/10.1002/aenm.202102283)
 
@@ -116,7 +116,7 @@ Fleck–Deshpande–McMeeking / Shishvan line (*J. Power Sources* 2021; *Acta Ma
 
 **Site nature:** **impurities / particles / micro-void edges** at the interface; growth morphology reflects contact-line mechanics more than homogeneous spinodal-like vacancy clustering.
 
-Related phase-field electro-chemo-mechanics: Zhao, Wang & Martínez-Pañeda (*JMPS* 2022); Li *et al.* (*ACS Appl. Mater. Interfaces* 2025) $P$–$T$ maps for void healing. [10.1016/j.jmps.2022.104999](https://doi.org/10.1016/j.jmps.2022.104999), [10.1021/acsami.4c13564](https://doi.org/10.1021/acsami.4c13564)
+Related phase-field electro-chemo-mechanics: Zhao, Wang & Martínez-Pañeda (*JMPS* 2022); Li *et al.* (*ACS Appl. Mater. Interfaces* 2025) $`P`$–$`T`$ maps for void healing. [10.1016/j.jmps.2022.104999](https://doi.org/10.1016/j.jmps.2022.104999), [10.1021/acsami.4c13564](https://doi.org/10.1021/acsami.4c13564)
 
 ### 2.5 Solute / insulating deposits (contact loss without classical voids)
 
@@ -126,7 +126,7 @@ Shishvan / Agier analyses propose that **solutes or insulating species** dissolv
 
 **Banerjee, Vishnugopi & Mukherjee** (*Adv. Sci.* 2025; follow-on *ACS Appl. Mater. Interfaces* 2026): explicit **terrace, step, and interlayer** vacancy/surface diffusion control morphological evolution; temperature expands the stable-contact window; **surface heterogeneities (e.g. Li GBs)** induce spatial variations in local rates and **rapid surface pits**. [10.1002/advs.202515827](https://doi.org/10.1002/advs.202515827), [10.1021/acsami.5c14957](https://doi.org/10.1021/acsami.5c14957)
 
-**Barai *et al.*** (*Chem. Mater.* 2024): phase-field — relative bulk vs surface Li diffusivities + current set final pore morphology; $T$ and pressure mitigate voids. [10.1021/acs.chemmater.3c01708](https://doi.org/10.1021/acs.chemmater.3c01708)
+**Barai *et al.*** (*Chem. Mater.* 2024): phase-field — relative bulk vs surface Li diffusivities + current set final pore morphology; $`T`$ and pressure mitigate voids. [10.1021/acs.chemmater.3c01708](https://doi.org/10.1021/acs.chemmater.3c01708)
 
 ---
 
@@ -148,7 +148,7 @@ This section is the core mapping from **where** to **why**.
 
 | Finding | Mechanistic link |
 |---------|------------------|
-| **Fuchs *et al.***: electrodeposited Li/Na show large columnar grains; **voids initiate within grains**, not preferentially at Li GBs | Li GBs act as **fast vacancy diffusion conduits** ($D_{\mathrm{GB}} \gg D_{\mathrm{bulk}}$), delaying contact loss at GBs |
+| **Fuchs *et al.***: electrodeposited Li/Na show large columnar grains; **voids initiate within grains**, not preferentially at Li GBs | Li GBs act as **fast vacancy diffusion conduits** ($`D_{\mathrm{GB}} \gg D_{\mathrm{bulk}}`$), delaying contact loss at GBs |
 | **Yoon *et al.*** atomistics: Li GB diffusion **3–6 orders** faster than bulk; finer Li grains extend stripping time before contact loss | Microstructure engineering of **anode grain size** changes effective diffusivity |
 | Banerjee 2026: Li GBs as surface heterogeneities → **spatial variation of rates → pits** | GBs can also **destabilize morphology** by nonuniform kinetics even if they transport vacancies well |
 
@@ -160,7 +160,7 @@ Reviewed in the broader GB context: arXiv grain-boundary review for ceramic SSBs
 
 SE GBs matter more for **plating / filament** pathways (electronic shorts, lower band gap at LLZO GBs—Liu, Song, etc.), but they also **modulate voiding indirectly**:
 
-- Nonuniform Li$^+$ conductivity at grains vs GBs → **current focusing** → spatially uneven stripping → contact inhomogeneity after cycles (reported for LLZO systems).
+- Nonuniform Li$`^+`$ conductivity at grains vs GBs → **current focusing** → spatially uneven stripping → contact inhomogeneity after cycles (reported for LLZO systems).
 - Argyrodite GB excess volume / soft regions may promote local delamination precursors (Sadowski & Albe).
 
 **Site identity:** **projections of SE microstructural heterogeneity** onto the anode contact plane (hotspots), rather than voids sitting “inside” the ceramic during stripping.
@@ -171,7 +171,7 @@ SE GBs matter more for **plating / filament** pathways (electronic shorts, lower
 
 - Initial step of voiding = **vacancy congregation** (regular-solution critical temperature for vacancy solubility).
 - Bare Li slabs: **(111)** least prone to pitting; **(100)/(110)** favor vacancy phase separation / step roughening.
-- With SEI interfaces, only **Li(110)|Li$_2$CO$_3$** among studied pairs retains void-suppressing character in their analysis.
+- With SEI interfaces, only **Li(110)|Li$`_2`$CO$`_3`$** among studied pairs retains void-suppressing character in their analysis.
 
 [10.1021/acsenergylett.2c00550](https://doi.org/10.1021/acsenergylett.2c00550)
 
@@ -181,8 +181,8 @@ SE GBs matter more for **plating / filament** pathways (electronic shorts, lower
 
 | Chemistry | Site tendency | Mechanism |
 |-----------|---------------|-----------|
-| High $W_{\mathrm{ad}}$ (Li$_2$O-like, good interlayers) | Vacancies less pinned at interface | Injection into bulk / easier healing |
-| Low $W_{\mathrm{ad}}$ (LiF-like, contaminated garnet) | Vacancies segregate; pores cling to interface | Needs high creep pressure (Feng & Qi) |
+| High $`W_{\mathrm{ad}}`$ (Li$`_2`$O-like, good interlayers) | Vacancies less pinned at interface | Injection into bulk / easier healing |
+| Low $`W_{\mathrm{ad}}`$ (LiF-like, contaminated garnet) | Vacancies segregate; pores cling to interface | Needs high creep pressure (Feng & Qi) |
 | Metallic interlayers (Au, Ag, …) | Shift critical current; alter vacancy barriers | Raj *et al.*: materials with higher CCD also have larger barriers to Li-vacancy accumulation at the interlayer|Li interface |
 
 **Site identity:** **chemically distinct patches** (native SEI, contamination, coatings)—voids track adhesion contrast.
@@ -241,7 +241,7 @@ flowchart TD
 From [`solid_electrolyte_li_contact_surface_diffusion_review.md`](solid_electrolyte_li_contact_surface_diffusion_review.md):
 
 - **Creep** (~3–15 MPa on LLZO-class systems) remains the practical knob when contact is **non-ideal**.
-- **Surface/vacancy diffusion** and **wetting** matter most when adhesion is high and $T$ activates $D$; Banerjee 2025 elevates terrace/step paths at low pressure.
+- **Surface/vacancy diffusion** and **wetting** matter most when adhesion is high and $`T`$ activates $`D`$; Banerjee 2025 elevates terrace/step paths at low pressure.
 - This voiding-site review adds: **which heterogeneities act as nuclei** and why **homogeneous vacancy coalescence** is contested (Shishvan 2023)—so low-pressure strategies must engineer **sites** (smoother SE, finer Li grains, lithiophilic chemistry, controlled facets), not only average diffusivity.
 
 ---
@@ -251,14 +251,14 @@ From [`solid_electrolyte_li_contact_surface_diffusion_review.md`](solid_electrol
 1. **Primary nucleus in a given cell chemistry:** as-built SE pores vs Li-grain-interior pits vs impurity foci—few studies measure all three on one sample set.
 2. **Reconcile vacancy thermodynamics with Onsager “no bulk driving force” critiques** under realistic roughness and GB networks.
 3. **Operando site attribution:** combine EBSD (Li grains), SE microstructure maps, and void tomography (e.g. X-ray / FIB-SEM) during stripping.
-4. **Interlayer design metrics:** link $W_{\mathrm{ad}}$, vacancy barriers (Raj), and measured void nucleation density at fixed low stack pressure.
+4. **Interlayer design metrics:** link $`W_{\mathrm{ad}}`$, vacancy barriers (Raj), and measured void nucleation density at fixed low stack pressure.
 5. **Plating texture → stripping voids:** can intentional Li(111) or Li(110)|carbonate interfaces suppress pits as Venturi suggests?
 
 ---
 
 ## 7. Suggested reading order
 
-1. Krauskopf *et al.* 2019 — operando stripping voids, $T$/$P$/alloy  
+1. Krauskopf *et al.* 2019 — operando stripping voids, $`T`$/$`P`$/alloy  
 2. Kassem & McCarthy 2019 — critical stripping current  
 3. Yan *et al.* 2021 — pre-existing defects vs ideal interface; creep flux  
 4. Seymour & Aguadero 2021 — adhesion and vacancy segregation  

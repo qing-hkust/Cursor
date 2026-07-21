@@ -10,5 +10,10 @@ Paper digests, reading lists, structured notes.
 
 Use GitHub-friendly delimiters so equations render on GitHub and in most previews:
 
-- Inline: `$...$` (not `\(...\)`)
-- Display: `$$...$$` on their own lines (not `\[...\]`)
+- **Inline:** dollar-backtick form `$`...`$` (open with `$` then backtick, close with backtick then `$`).
+  Example source: `` $`D_s`$ `` renders as inline math for D_s.
+  Do **not** use plain `$...$` — GitHub treats `_` inside it as italics.
+  Do **not** use `\(...\)`.
+- **Display:** `$$...$$` on their own lines (not `\[...\]`).
+
+See `.cursor/rules/quality/markdown-math.mdc`.
