@@ -19,7 +19,7 @@
 | Best lab-accessible proxy in ASSBs today? | **Electrochemical impedance** (ensemble contact loss) + occasional **tomography** for ground truth. **Ultrasound / SAM / nonlinear ultrasonics** are underexploited relative to bonding/tribology NDE. |
 | Most transferable external toolkit? | **Baik–Thompson spring model** ultrasonics; **C-SAM**; **nonlinear / kissing-bond** ultrasonics; **guided-wave phonon** matching to periodic roughness; **picosecond laser ultrasonics**; (selectively) **THz / IR / optical** through transparent or thin windows. |
 
-**Central physics:** When the ultrasonic (or electromagnetic) wavelength $\lambda$ is **large** compared with individual gap size $a$, the interface behaves as a **distributed spring** of stiffness $K$ (per unit area). Reflection/transmission depends on $K(\omega)$, which tracks **real contact area fraction** and gap population — even when **no single void is resolved**. When voids or grooves are **quasi-periodic** with period $\Lambda$, an additional **coherent / Bragg (“phonon”)** channel opens near $k \approx 2\pi/\Lambda$, often giving a sharper spectral signature than random roughness of the same RMS height.
+**Central physics:** When the ultrasonic (or electromagnetic) wavelength $`\lambda`$ is **large** compared with individual gap size $`a`$, the interface behaves as a **distributed spring** of stiffness $`K`$ (per unit area). Reflection/transmission depends on $`K(\omega)`$, which tracks **real contact area fraction** and gap population — even when **no single void is resolved**. When voids or grooves are **quasi-periodic** with period $`\Lambda`$, an additional **coherent / Bragg (“phonon”)** channel opens near $`k \approx 2\pi/\Lambda`$, often giving a sharper spectral signature than random roughness of the same RMS height.
 
 ---
 
@@ -29,9 +29,9 @@ Interfacial voids at Li|SE (and analogous Na|SE, etc.) are **regions of lost sol
 
 Detection goals differ:
 
-1. **Resolve one void** (morphology, location) → needs **imaging** with voxel size $\lesssim$ void size.
+1. **Resolve one void** (morphology, location) → needs **imaging** with voxel size $`\lesssim`$ void size.
 2. **Sense that contact has degraded** (area fraction, effective roughness) → can use **ensemble / wave** observables.
-3. **Map a spatial pattern** of many voids → intermediate; benefits from **coherent scattering** if the pattern has a characteristic length $\Lambda$.
+3. **Map a spatial pattern** of many voids → intermediate; benefits from **coherent scattering** if the pattern has a characteristic length $`\Lambda`$.
 
 NDE constraint for batteries: preserve the cell; ideally work **operando** under stack pressure and current; penetrate **mm-scale** electrodes, current collectors, and dense ceramics/sulfides.
 
@@ -41,11 +41,11 @@ NDE constraint for batteries: preserve the cell; ideally work **operando** under
 
 ### 2.1 Synchrotron / lab X-ray CT
 
-**Lewis, McDowell *et al.*** (*Nat. Mater.* 2021): operando synchrotron **X-ray microtomography** of Li | Li$_{10}$SnP$_2$S$_{12}$ | Li — directly visualizes **void formation during stripping**, quantifies contact loss, and links it to electrochemical failure. [10.1038/s41563-020-00903-2](https://doi.org/10.1038/s41563-020-00903-2)
+**Lewis, McDowell *et al.*** (*Nat. Mater.* 2021): operando synchrotron **X-ray microtomography** of Li | Li$`_{10}`$SnP$`_2`$S$`_{12}`$ | Li — directly visualizes **void formation during stripping**, quantifies contact loss, and links it to electrochemical failure. [10.1038/s41563-020-00903-2](https://doi.org/10.1038/s41563-020-00903-2)
 
 **Hao *et al.*** (*Nano Energy* 2021): in-situ synchrotron XCT tracking Li / cracks in sulfide SE with ~µm resolution. [10.1016/j.nanoen.2021.105744](https://doi.org/10.1016/j.nanoen.2021.105744)
 
-**Limits:** Li contrast is weak (low $Z$); lab CT often needs long scans; true **sub-µm** voids need synchrotron or nano-CT. Excellent for **validation**, poor as a routine cell monitor.
+**Limits:** Li contrast is weak (low $`Z`$); lab CT often needs long scans; true **sub-µm** voids need synchrotron or nano-CT. Excellent for **validation**, poor as a routine cell monitor.
 
 ### 2.2 Neutron radiography / tomography
 
@@ -86,24 +86,24 @@ EIS answers “has contact degraded?” not “where / what morphology?”. Wave
 
 ### 4.1 Scale regimes
 
-Consider an acoustic wavelength $\lambda = c/f$ in the solid ($c\sim 2$–$6$ km/s; $f = 1$–$100$ MHz ⇒ $\lambda \sim 30$ µm–6 mm).
+Consider an acoustic wavelength $`\lambda = c/f`$ in the solid ($`c\sim 2`$–$`6`$ km/s; $`f = 1`$–$`100`$ MHz ⇒ $`\lambda \sim 30`$ µm–6 mm).
 
 | Regime | Condition | Observable |
 |--------|-----------|------------|
-| **Rayleigh / single-scatterer** | $\lambda \gg a$, isolated void | Scattered amplitude $\propto$ small; hard to see one void |
-| **Quasi-static spring (QSA)** | $\lambda \gg$ gap width & spacing | Reflection $R(\omega)$ set by **interface stiffness** $K$ |
-| **Bragg / phonon** | $\lambda \sim 2\Lambda$ (period $\Lambda$) | Spectral **dips / mode conversion** from **periodic** gap array |
-| **Imaging (SAM)** | focused high-$f$ beam, $\lambda$ comparable to feature | C-scan map of **local** reflection |
+| **Rayleigh / single-scatterer** | $`\lambda \gg a`$, isolated void | Scattered amplitude $`\propto`$ small; hard to see one void |
+| **Quasi-static spring (QSA)** | $`\lambda \gg`$ gap width & spacing | Reflection $`R(\omega)`$ set by **interface stiffness** $`K`$ |
+| **Bragg / phonon** | $`\lambda \sim 2\Lambda`$ (period $`\Lambda`$) | Spectral **dips / mode conversion** from **periodic** gap array |
+| **Imaging (SAM)** | focused high-$`f`$ beam, $`\lambda`$ comparable to feature | C-scan map of **local** reflection |
 
-**Key point for the user’s question:** a **periodic or quasi-periodic void array** with period $\Lambda$ can be detected even when **each void is unresolved**, because:
+**Key point for the user’s question:** a **periodic or quasi-periodic void array** with period $`\Lambda`$ can be detected even when **each void is unresolved**, because:
 
-1. **Many small gaps** reduce average $K$ → finite $|R|$ in the QSA (Sect. 4.2).
+1. **Many small gaps** reduce average $`K`$ → finite $`|R|`$ in the QSA (Sect. 4.2).
 2. **Periodicity** concentrates scattering into **coherent orders** near Bragg conditions (Sect. 4.3) — a spectral fingerprint that random roughness lacks at the same RMS amplitude.
 3. **Roughness / contact-fraction change** is exactly what tribology ultrasonics already measures as “real area of contact” proxies.
 
 ### 4.2 Baik–Thompson spring model (imperfect solid–solid interfaces)
 
-**Baik & Thompson** (*J. Nondestruct. Eval.* 1984): imperfect interfaces as continuous **normal/tangential springs** $K_N$, $K_T$. [10.1007/BF00566223](https://doi.org/10.1007/BF00566223)
+**Baik & Thompson** (*J. Nondestruct. Eval.* 1984): imperfect interfaces as continuous **normal/tangential springs** $`K_N`$, $`K_T`$. [10.1007/BF00566223](https://doi.org/10.1007/BF00566223)
 
 Boundary conditions (schematic):
 
@@ -111,23 +111,23 @@ $$
 \sigma_{zz} = K_N \,\Delta u_z, \qquad \sigma_{xz} = K_T \,\Delta u_x.
 $$
 
-For normal incidence, the **reflection coefficient** of a thin imperfect interface is frequency-dependent through $K_N$; measuring $R(f)$ recovers $K_N$.
+For normal incidence, the **reflection coefficient** of a thin imperfect interface is frequency-dependent through $`K_N`$; measuring $`R(f)`$ recovers $`K_N`$.
 
 **Drinkwater, Dwyer-Joyce & Cawley** (*Proc. R. Soc. A* 1996): ultrasonic reflection from **partially contacting rough Al–Al** interfaces — spring model fits; stiffness tracks load / contact evolution. [10.1098/rspa.1996.0139](https://doi.org/10.1098/rspa.1996.0139)
 
 **Dwyer-Joyce, Drinkwater & Quinn** (*ASME J. Tribol.* 2001): ultrasound as a probe of **rough-surface contact**; number of asperity contacts vs load. [10.1115/1.1330740](https://doi.org/10.1115/1.1330740)
 
-**Transfer to M|SE:** stripping-induced voids = **reduction of real contact area** = **drop in $K_N$** = **rise in ultrasonic reflection** (or drop in transmission) at the interface — **without resolving individual voids**. Stack pressure plays the role of the tribology “load” calibration.
+**Transfer to M|SE:** stripping-induced voids = **reduction of real contact area** = **drop in $`K_N`$** = **rise in ultrasonic reflection** (or drop in transmission) at the interface — **without resolving individual voids**. Stack pressure plays the role of the tribology “load” calibration.
 
-**Caveat (Kendall–Tabor):** $K$ depends on **size, number, and spacing** of contact patches — not uniquely on area fraction. Still a powerful **monotonic** indicator of contact degradation.
+**Caveat (Kendall–Tabor):** $`K`$ depends on **size, number, and spacing** of contact patches — not uniquely on area fraction. Still a powerful **monotonic** indicator of contact degradation.
 
 ### 4.3 Periodic voids / roughness: Bragg and guided-wave “phonon” signatures
 
 **Angel & Achenbach** (*J. Appl. Mech.* 1985): reflection/transmission by a **periodic array of cracks** — coherent scattering orders. [10.1115/1.3169023](https://doi.org/10.1115/1.3169023)
 
-**Potel, Leduc, Izbicki *et al.*** (*JASA* 2017): SH guided waves in **metal–adhesive–metal** with **periodic triangular grooves** ($\Lambda = 3.7$ mm). Transmission shows a **minimum at the phonon (phase-matching) frequency**; retro-converted modes appear **only when periodicity is present** (vanish for a single groove). [experimental PDF context](https://perso.univ-lemans.fr/~cpotel/rugosite_SH_exp_JASA_vol_141iss_64591_1.pdf)
+**Potel, Leduc, Izbicki *et al.*** (*JASA* 2017): SH guided waves in **metal–adhesive–metal** with **periodic triangular grooves** ($`\Lambda = 3.7`$ mm). Transmission shows a **minimum at the phonon (phase-matching) frequency**; retro-converted modes appear **only when periodicity is present** (vanish for a single groove). [experimental PDF context](https://perso.univ-lemans.fr/~cpotel/rugosite_SH_exp_JASA_vol_141iss_64591_1.pdf)
 
-**Implication:** if Li|SE voids organize with a characteristic spacing $\Lambda$ (e.g. set by SE grain size, lithography, or roughness correlation length), tune frequency / angle so that
+**Implication:** if Li|SE voids organize with a characteristic spacing $`\Lambda`$ (e.g. set by SE grain size, lithography, or roughness correlation length), tune frequency / angle so that
 
 $$
 \mathbf{k}_\mathrm{incident} - \mathbf{k}_\mathrm{scattered} \approx \frac{2\pi}{\Lambda}\,\hat{\mathbf{n}}_\mathrm{period}
@@ -196,7 +196,7 @@ flowchart LR
 
 | Field | Defect type | Method | Exploit for Li\|SE? |
 |-------|-------------|--------|---------------------|
-| Tribology NDE | Rough solid–solid contact | $R(f)\to K_N$ | **High** — same physics as voided contact |
+| Tribology NDE | Rough solid–solid contact | $`R(f)\to K_N`$ | **High** — same physics as voided contact |
 | Aerospace diffusion bonds | µm interfacial gaps | Focused UT, Kirchhoff models | **High** for flat cells |
 | Wafer hybrid bonding | nm–µm voids | C-SAM, APiC, IR | **Medium** — thin-stack cells |
 | Adhesive joints | Kissing bonds | Nonlinear UT / CAN | **High** for pressurized partial contact |
@@ -209,15 +209,15 @@ flowchart LR
 
 **Yes — in two complementary ways:**
 
-1. **Even without periodicity (random array):** if $\lambda \gg a$, the QSA applies. An array of sub-resolution voids lowers $K_N$ and raises $|R|$ (or lowers transmission). Detectability scales with **contact-area deficit**, not with resolving one void. This is already validated on **rough metal contacts** (Drinkwater / Dwyer-Joyce).
+1. **Even without periodicity (random array):** if $`\lambda \gg a`$, the QSA applies. An array of sub-resolution voids lowers $`K_N`$ and raises $`|R|`$ (or lowers transmission). Detectability scales with **contact-area deficit**, not with resolving one void. This is already validated on **rough metal contacts** (Drinkwater / Dwyer-Joyce).
 
-2. **With quasi-periodicity (period $\Lambda$):** an extra **coherent channel** appears near Bragg / phonon conditions. Experiments on **periodic groove arrays** in bonded plates show transmission minima and mode conversion that **disappear when periodicity is removed**. So a “somewhat periodic” void field (e.g. correlated with SE grain structure or engineered roughness) is **spectrally more distinctive** than the same void volume randomly placed.
+2. **With quasi-periodicity (period $`\Lambda`$):** an extra **coherent channel** appears near Bragg / phonon conditions. Experiments on **periodic groove arrays** in bonded plates show transmission minima and mode conversion that **disappear when periodicity is removed**. So a “somewhat periodic” void field (e.g. correlated with SE grain structure or engineered roughness) is **spectrally more distinctive** than the same void volume randomly placed.
 
 **Practical design rule for an ASSB ultrasonic experiment:**
 
-- Choose $f$ so $\lambda$ is **large vs void height** (QSA valid) but **comparable to or longer than** expected $\Lambda$ if seeking Bragg features.
-- Measure **interface echo** $R(f)$ vs cycle number / stack pressure; invert to $K_N(t)$.
-- Optionally sweep angle/frequency for **phonon matching** if PSD of interface morphology shows a peak at $\Lambda$.
+- Choose $`f`$ so $`\lambda`$ is **large vs void height** (QSA valid) but **comparable to or longer than** expected $`\Lambda`$ if seeking Bragg features.
+- Measure **interface echo** $`R(f)`$ vs cycle number / stack pressure; invert to $`K_N(t)`$.
+- Optionally sweep angle/frequency for **phonon matching** if PSD of interface morphology shows a peak at $`\Lambda`$.
 - Calibrate against **one** XCT / transparent-LLZO dataset.
 
 ---
@@ -225,9 +225,9 @@ flowchart LR
 ## 7. What is hard specifically for Li|SE
 
 1. **Soft Li** attenuates and complicates coupling; plastic flow changes contact under the transducer load.
-2. **Acoustic impedance** of Li vs oxide/sulfide SE already mismatches — baseline interface echo exists even for “perfect” contact; need **differential** $R$ vs state-of-charge / cycle.
-3. **Interphase layers** (Li$_2$S, Li$_3$P, etc.) add thin-layer reflections that can mimic weak bonds — multi-frequency / multi-mode separation required (cf. adhesive-joint spectroscopy).
-4. **Stack pressure** simultaneously heals voids **and** changes $K_N$ — same coupling that tribology exploits, but must be controlled.
+2. **Acoustic impedance** of Li vs oxide/sulfide SE already mismatches — baseline interface echo exists even for “perfect” contact; need **differential** $`R`$ vs state-of-charge / cycle.
+3. **Interphase layers** (Li$`_2`$S, Li$`_3`$P, etc.) add thin-layer reflections that can mimic weak bonds — multi-frequency / multi-mode separation required (cf. adhesive-joint spectroscopy).
+4. **Stack pressure** simultaneously heals voids **and** changes $`K_N`$ — same coupling that tribology exploits, but must be controlled.
 5. **Safety / atmosphere:** water-immersion SAM vs glovebox-compatible dry UT.
 
 None of these are fundamental show-stoppers; they are **metrology engineering** problems already faced in diffusion bonding and package inspection.
@@ -237,7 +237,7 @@ None of these are fundamental show-stoppers; they are **metrology engineering** 
 ## 8. Recommended reading order
 
 1. Baik & Thompson 1984 — spring model  
-2. Drinkwater *et al.* 1996 + Dwyer-Joyce review (ultrasound in tribology) — contact fraction ↔ $R$  
+2. Drinkwater *et al.* 1996 + Dwyer-Joyce review (ultrasound in tribology) — contact fraction ↔ $`R`$  
 3. Lewis *et al.* 2021 — XCT ground truth for Li\|SE voids  
 4. Potel *et al.* 2017 — periodic roughness → guided-wave phonon signature  
 5. Nonlinear kissing-bond papers (Alston / Solodov) — closed contacts  
@@ -248,7 +248,7 @@ None of these are fundamental show-stoppers; they are **metrology engineering** 
 
 ## 9. Open opportunities (methods to exploit next)
 
-1. **Operando ultrasonic $K_N(t)$** on Li|LLZO or Li|sulfide symmetric cells under controlled stack pressure — calibrate vs XCT once.  
+1. **Operando ultrasonic $`K_N(t)`$** on Li|LLZO or Li|sulfide symmetric cells under controlled stack pressure — calibrate vs XCT once.  
 2. **Nonlinear UT** during early stripping (kissing / partial contact) before open voids appear in tomography.  
 3. **Engineered periodic roughness** on SE as a **designed Bragg tag** to amplify wave contrast for metrology (and possibly to study void nucleation sites).  
 4. **C-SAM-style mapping** of flat thin cells after formation — manufacturing QC transfer from wafer bonding.  

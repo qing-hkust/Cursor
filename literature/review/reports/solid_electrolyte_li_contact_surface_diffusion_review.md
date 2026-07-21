@@ -17,7 +17,7 @@ During **Li stripping**, Li is removed faster than the interface can be replenis
 | **Power-law creep / plastic flow** | Stack pressure, elevated *T* | Often **~3–15 MPa** for Li on LLZO at practical currents | Krauskopf *et al.*; Yan *et al.*; Fleck–Deshpande–McMeeking; Li *et al.* (phase-field + creep) |
 | **Vacancy / surface diffusion** | Temperature, **lithiophilic adhesion**, coherent interface, alloy chemistry | Can matter at **low or zero MPa** if adhesion and diffusivity are high | Seymour & Aguadero; Yang & Mo (MD); Feng & Yang & Qi (KMC); Krauskopf (diffusion-limited delithiation); Banerjee & Mukherjee (terrace/step diffusion, 2025) |
 
-**Wetting / adhesion** is not cosmetic: theory and DFT link **work of adhesion** \(W_\mathrm{ad}\) to **vacancy segregation** at the interface. A widely cited criterion is that void-suppressing vacancy injection into the bulk is favored when **\(W_\mathrm{ad} \gtrsim 2\gamma_\mathrm{Li}\)** (complete wetting / lithiophilicity)—Seymour & Aguadero. **Interlayers** (Au, Ag, Mg-alloy, oxides, artificial SEI) are used to raise adhesion, improve wetting, and change whether creep or diffusion is rate-limiting.
+**Wetting / adhesion** is not cosmetic: theory and DFT link **work of adhesion** $`W_\mathrm{ad}`$ to **vacancy segregation** at the interface. A widely cited criterion is that void-suppressing vacancy injection into the bulk is favored when **$`W_\mathrm{ad} \gtrsim 2\gamma_\mathrm{Li}`$** (complete wetting / lithiophilicity)—Seymour & Aguadero. **Interlayers** (Au, Ag, Mg-alloy, oxides, artificial SEI) are used to raise adhesion, improve wetting, and change whether creep or diffusion is rate-limiting.
 
 **Implication for your hypothesis:** Literature supports that **low-pressure operation** is viable when **(i)** Li **surface/vacancy diffusivity** is high (elevated *T*, coherent interface, or fast surface paths), and **(ii)** the interface is **lithiophilic** so vacancies do not pin at the SE. Creep is still important when adhesion is poor or currents are high, but it is **not the only** contact-healing mechanism—and recent modeling explicitly elevates **terrace, step, and interlayer surface diffusion** on Li metal (Banerjee *et al.*, 2025).
 
@@ -73,7 +73,7 @@ During **Li stripping**, Li is removed faster than the interface can be replenis
 | Study | Method | Surface diffusion / diffusion message |
 |-------|--------|--------------------------------------|
 | **Yang, Liu, Nolan, Mo 2021** | Large-scale **MD** | Stripping/plating on SE; **coherent** vs **incoherent** interfaces; pore nucleation when **Li flux** cannot replenish interface; **pressure–adhesion** map. [DOI 10.1002/adma.202008081](https://doi.org/10.1002/adma.202008081) |
-| **Seymour & Aguadero 2021** | DFT + **bond-breaking model** | **Surface → subsurface** vacancy hop barrier **≫** bulk hop (0.24 eV vs ~0.04 eV in Li); segregation suppressed when **\(W_\mathrm{ad} \gtrsim 2\gamma_\mathrm{m}\)**. [DOI 10.1039/d1ta03254b](https://doi.org/10.1039/d1ta03254b) |
+| **Seymour & Aguadero 2021** | DFT + **bond-breaking model** | **Surface → subsurface** vacancy hop barrier **≫** bulk hop (0.24 eV vs ~0.04 eV in Li); segregation suppressed when **$`W_\mathrm{ad} \gtrsim 2\gamma_\mathrm{m}`$**. [DOI 10.1039/d1ta03254b](https://doi.org/10.1039/d1ta03254b) |
 | **Feng, Yang, Qi 2022** | DFT + **KMC** + analytics | **Li/Li₂O** (lithiophilic) vs **Li/LiF** (lithiophobic): lithiophobic needs **much higher** pressure to flatten surface; pressure tilts hopping barriers → mimics creep bias on vacancy motion. [DOI 10.1149/1945-7111/ac91aa](https://doi.org/10.1149/1945-7111/ac91aa) |
 | **Yang, Qi 2021** | Interface design (*Chem. Mater.*) | Maintaining flat Li during stripping via engineered interfacial chemistry. [DOI 10.1021/acs.chemmater.0c04814](https://doi.org/10.1021/acs.chemmater.0c04814) |
 | **Banerjee, Vishnugopi, Mukherjee 2025** | Continuum + kinetics | Explicit **terrace, step, and interlayer surface diffusion** on Li; temperature expands stable-contact regime; links surface diffusivity to overcoming contact loss at high reaction rates. [DOI 10.1002/advs.202515827](https://doi.org/10.1002/advs.202515827) |
@@ -90,7 +90,7 @@ During **Li stripping**, Li is removed faster than the interface can be replenis
 - **Venturi & Viswanathan 2022** (*ACS Energy Lett.*): thermodynamics of **initial void formation** steps. [DOI 10.1021/acsenergylett.2c00550](https://doi.org/10.1021/acsenergylett.2c00550)
 - **Barai *et al.* 2024** (*Chem. Mater.*): void formation study with modeling/experiment comparison. [DOI 10.1021/acs.chemmater.3c01708](https://doi.org/10.1021/acs.chemmater.3c01708)
 
-**Synthesis for low pressure:** When **\(W_\mathrm{ad}\)** is high (wetting) and **T** is elevated, **vacancy submergence** and **surface diffusion** can maintain contact **without MPa creep**. When adhesion is poor (LiF-like, lithiophobic), literature consistently shows **creep pressure must rise** toward **10–20 MPa** in KMC-informed estimates (Feng & Qi 2022)—matching the “creep-only” narrative in those systems.
+**Synthesis for low pressure:** When **$`W_\mathrm{ad}`$** is high (wetting) and **T** is elevated, **vacancy submergence** and **surface diffusion** can maintain contact **without MPa creep**. When adhesion is poor (LiF-like, lithiophobic), literature consistently shows **creep pressure must rise** toward **10–20 MPa** in KMC-informed estimates (Feng & Qi 2022)—matching the “creep-only” narrative in those systems.
 
 ---
 
@@ -113,7 +113,7 @@ Bare **garnet (LLZO)** is often **poorly wetted** by Li → high interfacial imp
 ### 4.2 Coherent vs incoherent interface (MD + DFT)
 
 - **Yang & Mo 2021**: **Coherent** Li|SE interfaces sustain stripping longer at **zero pressure** because vacancy/interstitial carriers form readily and migrate into bulk.
-- **Seymour 2021**: **Incoherent** Li|LiCl interfaces break simple \(W_\mathrm{ad}\) rules—local site energies matter; interlayer design must target **atomic structure**, not just average adhesion.
+- **Seymour 2021**: **Incoherent** Li|LiCl interfaces break simple $`W_\mathrm{ad}`$ rules—local site energies matter; interlayer design must target **atomic structure**, not just average adhesion.
 
 ### 4.3 Transient interfacial behavior
 
@@ -139,14 +139,14 @@ Bare **garnet (LLZO)** is often **poorly wetted** by Li → high interfacial imp
 | Creep under pressure stabilizes contact | Extensive (Krauskopf, Yan, Fleck group, Li phase-field 2025) | Requires **MPa** scale for pure Li on LLZO at mA cm⁻² currents |
 | High pressure is practically challenging | Acknowledged in Seymour 2021; Doux 2019; Porz 2023 | Pouch/cylindrical formats need external fixtures or swelling management |
 | **Surface diffusion** important at **low pressure** | Supported by MD (Yang & Mo), KMC (Feng & Qi), Seymour adhesion theory, Banerjee 2025 terrace/step diffusion, Krauskopf diffusion-limited delithiation | Must distinguish **Li metal surface diffusion** from **vacancy bulk diffusion**; both appear in models |
-| **Wetting** helps contact | Strong: Han garnet coatings, \(W_\mathrm{ad} \gtrsim 2\gamma\) criterion, lithiophilic Li₂O vs LiF KMC | Wetting improves **initial** and **thermodynamic** vacancy injection; kinetics still need sufficient **T** or current below CCD |
+| **Wetting** helps contact | Strong: Han garnet coatings, $`W_\mathrm{ad} \gtrsim 2\gamma`$ criterion, lithiophilic Li₂O vs LiF KMC | Wetting improves **initial** and **thermodynamic** vacancy injection; kinetics still need sufficient **T** or current below CCD |
 | **Interlayers** enable low-pressure operation | Li–Mg (Krauskopf), Au/Ag/oxide coatings, artificial SEI—each changes diffusion vs creep balance | Alloys may shift failure to **compositional depletion** rather than voids |
 
 ### Proposed research gaps (where your work could contribute)
 
 1. **Quantitative regime map** on one SE system: axes = **stack pressure (0–5 MPa)**, **temperature**, **current density**; metric = contact area fraction / interfacial impedance—separate **creep-dominated** vs **surface-diffusion-dominated** regions (Banerjee 2025 begins this; few operando experiments validate at **sub-MPa**).
 2. **Direct operando measurement** of Li **surface diffusion** (e.g., tracer methods, grain-boundary-sensitive probes) at Li|SE during stripping—most evidence is inferential via void morphology.
-3. **Wetting metrics linked to kinetics:** \(W_\mathrm{ad}\) from DFT/contact angle vs **critical stripping current** at **fixed low pressure**—systematic interlayer library (Seymour + Feng & Qi framework).
+3. **Wetting metrics linked to kinetics:** $`W_\mathrm{ad}`$ from DFT/contact angle vs **critical stripping current** at **fixed low pressure**—systematic interlayer library (Seymour + Feng & Qi framework).
 4. **Non-Li metals / Zn** analogies: surface diffusion in electrodeposition (d0cp01352h) may translate to **Zn|solid electrolyte** if such systems are in scope.
 
 ---
